@@ -30,3 +30,6 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 Team
 Anastasiia Stadnichenko
 Stanislav Tarasiuk
+Shubets Roman
+Zhavelia Iryna
+Romaniuk Vitalii
