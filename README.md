@@ -44,3 +44,4 @@ Maksym Salo
 - Shubets Roman
 - Zhavelia Iryna
 - Romaniuk Vitalii
+- Yaroslav Pundor
