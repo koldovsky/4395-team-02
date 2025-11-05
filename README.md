@@ -27,11 +27,21 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 ```html
 <a href="https://notareallink" data-proofer-ignore>Not checked.</a>
 ```
-
-Team:
 Shkarupa Vlad
+Team
 Anastasiia Stadnichenko
 Stanislav Tarasiuk
 Shubets Roman
 Zhavelia Iryna
 Romaniuk Vitalii
+Maksym Salo
+
+**Team:**
+
+- Shkarupa Vlad
+- Anastasiia Stadnichenko
+- Stanislav Tarasiuk
+- Shubets Roman
+- Zhavelia Iryna
+- Romaniuk Vitalii
+- Yaroslav Pundor
