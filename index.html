@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <script
-      src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header class="header">
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.header-nav.partial.html"
-      ></nav>
-    </header>
-    <main class="main">
-      <!-- Anastasiia Stadnichenko -->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.about-us.partial.html"
-      ></section>
-      <!-- Anastasiia Stadnichenko -->
-      <!-- Stanislav Tarasiuk -->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.contact.partial.html"
-      ></section>
-      <!-- Stanislav Tarasiuk -->
-    </main>
-    <footer class="footer">
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.footer.partial.html"
-      ></nav>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
+  </header>
+  <main class="main">
+    <!-- Anastasiia Stadnichenko -->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.about-us.partial.html"></section>
+    <!-- Anastasiia Stadnichenko -->
+    <!-- Stanislav Tarasiuk -->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.contact.partial.html"></section>
+    <!-- Stanislav Tarasiuk -->
+  </main>
+  <footer class="footer">
+    <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></nav>
+
+
+    <!-- Shkarupa Vlad -->
+    <section class="services">
+      <article class="services__card">
+        <img src="img/hardwarerepair/hardwarerepair_1.jpg" alt="Апаратний ремонт смартфона на платі">
+        <h3>Hardware Repair</h3>
+        <p>
+          From battery replacements to fixing malfunctioning buttons, our expert technicians are equipped to handle a
+          wide
+          range of hardware issues with precision and care.
+        </p>
+        <ul>
+          <li>Preliminary diagnostics is mandatory</li>
+        </ul>
+      </article>
+
+      <article class="services__card--dark">
+        <img src="img/hardwarerepair/hardwarerepair_2.jpg" alt="Комплекти екранів для заміни">
+        <h3>Screen Replacements</h3>
+        <p>
+          We understand the frustration of dealing with a cracked or damaged screen. That's why we offer comprehensive
+          screen replacement services for all gadgets.
+        </p>
+        <ul>
+          <li>All models of top brands</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="stats">
+      <ul class="stats__list">
+        <li class="stats__item--experience">
+          <p class="stats__value">25+</p>
+          <h4 class="stats__title">Years of Experience</h4>
+          <p>
+            We bring unparalleled expertise and know-how to every repair job, ensuring high quality and your
+            satisfaction.
+          </p>
+        </li>
+        <li class="stats__item--daily">
+          <p class="stats__value">30+</p>
+          <h4 class="stats__title">Gadgets Repaired Daily</h4>
+          <p>
+            With meticulous attention to detail, we prioritize getting your devices back in your hands as quickly as
+            possible.
+          </p>
+        </li>
+        <li class="stats__item--experts">
+          <p class="stats__value">
+            15
+          </p>
+          <h4 class="stats__title">Tech Experts</h4>
+          <p>
+            With their combined expertise, we deliver superior service and technical proficiency with every repair job.
+          </p>
+        </li>
+        <li class="stats__item--clients">
+          <p class="stats__value">34.5k+</p>
+          <h4 class="stats__title">Clients Served in NY</h4>
+          <p>
+            Our clientele speaks volumes about our dedication to providing reliable, top-quality mobile repair
+            services.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- Shkarupa Vlad -->
+
+  </footer>
+</body>
+
 </html>
