@@ -31,3 +31,4 @@ Team
 Anastasiia Stadnichenko
 Shubets Roman
 Zhavelia Iryna
+Romaniuk Vitalii 
