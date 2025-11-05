@@ -33,3 +33,4 @@ Stanislav Tarasiuk
 Shubets Roman
 Zhavelia Iryna
 Romaniuk Vitalii
+Maksym Salo
