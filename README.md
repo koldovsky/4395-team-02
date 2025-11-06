@@ -47,4 +47,4 @@ Maksym Salo
 - Yaroslav Pundor
 - Serafym Starobrianskyi
 - Maksym Salo
- -Pavlo Sorokovij
+- Pavlo Sorokovij
