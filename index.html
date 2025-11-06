@@ -12,9 +12,13 @@
 </head>
 
 <body>
-  <header class="header">
+  <!-- Romaniuk Vitalii -->
+ <header class="header">
     <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
-  </header>
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-hero.partial.html"></section>
+</header>
+  <!-- Romaniuk Vitalii -->
+
   <main class="main">
     <!-- Anastasiia Stadnichenko -->
     <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.about-us.partial.html"></section>
@@ -22,6 +26,10 @@
     <!-- Stanislav Tarasiuk -->
     <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.contact.partial.html"></section>
     <!-- Stanislav Tarasiuk -->
+
+    <!--Serafym Starobrianskyi-->
+    <section hx-trigger="load" hx-get="index.testimonials.partial.html" hx-select="section.testimonials" hx-swap="outerHTML"> </section>
+    <!--finish Serafym Starobrianskyi-->
   </main>
   <footer class="footer">
     <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></nav>

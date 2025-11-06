@@ -45,3 +45,6 @@ Maksym Salo
 - Zhavelia Iryna
 - Romaniuk Vitalii
 - Yaroslav Pundor
+- Serafym Starobrianskyi
+- Maksym Salo
+- Pavlo Sorokovij
