@@ -46,3 +46,4 @@ Maksym Salo
 - Romaniuk Vitalii
 - Yaroslav Pundor
 - Serafym Starobrianskyi
+- Maksym Salo
