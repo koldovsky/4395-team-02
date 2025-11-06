@@ -39,3 +39,5 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Serafym Starobrianskyi
 - Maksym Salo
 - Pavlo Sorokovij
+- Sofiia Tolstonoh
+- Truhon Angelina
