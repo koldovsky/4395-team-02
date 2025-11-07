@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TechPro</title>
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <script src="https://unpkg.com/htmx.org@1.9.10" 
-            integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" 
-            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="#">
 </head>
+
 <body>
     <header class="header">
         <!-- Navigation menu will be loaded here -->
-        <nav data-hx-trigger="load" 
-             data-hx-swap="outerHTML" 
-             data-hx-get="global.header-nav.partial.html">
+        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html">
         </nav>
 
-        
-        
+
+
     </header>
 
     <main class="main">
-       
-        <!-- Vitalii Romaniuk -->
-        <section data-hx-trigger="load" 
-                 data-hx-swap="outerHTML" 
-                 data-hx-get="about.content.partial.html">
-        </section>
-                <!-- Vitalii Romaniuk -->
 
-         <!-- Angelina Truhon -->
-        <section data-hx-trigger="load" 
-                 data-hx-swap="outerHTML" 
-                 data-hx-get="aboutus.intro.partial.html">
+        <!-- Vitalii Romaniuk -->
+        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="about.content.partial.html">
         </section>
-         <!-- Angelina Truhon -->
+        <!-- Vitalii Romaniuk -->
+
+        <!-- Angelina Truhon -->
+        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="aboutus.intro.partial.html">
+        </section>
+        <!-- Angelina Truhon -->
 
 
         <!-- @Angelina Truhon @Alina Vlasenko @Volodymyr Sinkin -->
+
+        <!-- @Alina Vlasenko -->
+        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="about-us.faq.partial.html">
+        </section>
+        <!-- @Alina Vlasenko -->
     </main>
 
     <footer class="footer">
         <!-- Footer will be loaded here -->
-        <nav data-hx-trigger="load" 
-             data-hx-swap="outerHTML" 
-             data-hx-get="global.footer.partial.html">
+        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html">
         </nav>
     </footer>
 </body>
+
 </html>
-
-
-
-
