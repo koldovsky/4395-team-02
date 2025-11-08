@@ -49,16 +49,18 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  font-size: 0.9rem;
+  font-size: 12px;
   margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 76px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 400;
   margin: 10px 0 20px;
   color: #fff;
+  font-family: 'Questrial', sans-serif;
 }
 
 .accent {
