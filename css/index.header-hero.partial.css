@@ -1,4 +1,4 @@
-body {
+/*body {
   background-image: url('../assets/img/header-header-hero/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,17 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 /* ========== GLOBAL STYLES ========== */
-body {
-  background-image: url('../assets/img/header-header-hero/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  overflow-x: hidden;
-}
+
 
 /* ========== HERO SECTION ========== */
 .hero {
@@ -29,7 +19,14 @@ body {
   padding: 100px 8%;
   position: relative;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.85); /* subtle dark overlay for contrast */
+  background-image: url('../assets/img/header-header-hero/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .hero-inner {
