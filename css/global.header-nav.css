@@ -13,7 +13,7 @@ body {
 
 /* --- Top Bar --- */
 .top-bar {
-  background-color: #0d0d0d;
+  background-image: url('../assets/img/header-header-hero/bg.png');
   border-bottom: 1px solid #222;
   padding: 8px 0;
   font-size: 14px;
@@ -56,7 +56,7 @@ body {
 
 /* --- Main Navigation --- */
 .main-nav {
-  background-color: #111;
+  background-image: url('../assets/img/header-header-hero/bg.png');
   padding: 16px 0;
 }
 
