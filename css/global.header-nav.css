@@ -120,3 +120,17 @@ body {
     margin-left: auto;
   }
 }
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.top-bar {
+  margin-top: 0 !important;
+  padding-top: 8px !important;
+}
+
+main, section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
