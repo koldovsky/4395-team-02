@@ -105,7 +105,8 @@ body {
 }
 
 .btn.btn-primary:hover {
-  background-color: #ff784f;
+  background-color: #ffffff;
+  color: black;
   transform: translateY(-2px);
 }
 
