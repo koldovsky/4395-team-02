@@ -3,7 +3,8 @@
 .testimonials {
   font-family: "Lato", sans-serif;
   text-align: center;
-  padding: 0 20px;
+  padding: 100px 20px;
+  background: #fff;
 }
 .testimonials__title {
   color: #ff6534;
