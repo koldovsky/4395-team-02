@@ -9,6 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   background-color: #0d0d0d;
+  
 }
 
 /* --- Top Bar --- */
@@ -124,18 +125,4 @@ body {
   .cta-button {
     margin-left: auto;
   }
-}
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.top-bar {
-  margin-top: 0 !important;
-  padding-top: 8px !important;
-}
-
-main, section:first-of-type {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
 }

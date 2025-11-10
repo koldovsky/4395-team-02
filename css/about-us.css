@@ -1,14 +1,14 @@
+@import 'global.css';
 @import 'global.header-nav.css';
 @import 'about-us.hero.navigation.partial.css';
-@import 'global.css';
 
 
 .header .main-nav {
-  background: #000 !important;  /* solid black background */
-  background-image: none !important;  /* remove background image */
+  background: #000;  /* solid black background */
   border-bottom: 1px solid #222; /* optional, to keep the same bottom line */
 }
 .header .top-bar {
-  background: #000 !important;
-  background-image: none !important;
+  background: #000000;
 }
+
+
