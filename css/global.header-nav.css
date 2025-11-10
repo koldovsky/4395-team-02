@@ -58,6 +58,9 @@ body {
 .main-nav {
   background-image: url('../assets/img/header-header-hero/bg.png');
   padding: 16px 0;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */ 
 }
 
 .nav-wrapper {
@@ -79,15 +82,15 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin-right: 30px;
+  margin-right: 200px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #fff;
+  color: #bdbdbd;
   font-weight: 500;
   transition: color 0.3s ease;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -100,7 +103,7 @@ body {
   background-color: #ff6333;
   color: #fff;
   padding: 10px 22px;
-  border-radius: 4px;
+  border-radius: 0px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
