@@ -1,1 +1,113 @@
+:root {
+  --color-accent: #ff6534;
+  --color-text-dark: #4e4e4e;
+  --color-text-gray: #727272;
+  --font-main: "Lato", sans-serif;
+  --font-title: "Questrial", sans-serif;
+}
+
+.hero-repair {
+  width: 100%;
+}
+
+.hero-repair__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Repair Services Section === */
+.repair-services {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subtitle */
+.repair-services__subtitle {
+  color: var(--color-accent);
+  font-family: var(--font-main);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.repair-services__title {
+  font-family: var(--font-title);
+  font-size: 38px;
+  line-height: 1.2;
+  color: #000;
+  text-align: left;
+}
+
+.repair-services__highlight {
+  color: var(--color-accent);
+  font-family: var(--font-title);
+  font-size: 38px;
+}
+
+/* Services grid */
+.repair-services__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Desktop grid (2×3 layout) */
+@media (min-width: 768px) {
+  .repair-services__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.repair-services__item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.repair-services__icon {
+  width: 40px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* Service Name */
+.repair-services__name {
+  font-family: var(--font-title);
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+}
+
+/* Description */
+.repair-services__text {
+  font-family: var(--font-main);
+  font-size: 17px;
+  color: var(--color-text-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Price */
+.repair-services__price {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-text-dark);
+  font-weight: 600;
+  margin-top: 4px;
+}
 
