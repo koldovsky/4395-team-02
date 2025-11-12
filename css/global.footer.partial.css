@@ -8,8 +8,11 @@
     padding: 1rem 2rem;
     width: 100%;
     box-sizing: border-box;
+    background: #121212;
 }
-
+.footer__tagline{
+    color:#ffffff;
+}
 /* Common child containers inside the footer */
 .footer__branding,
 .footer__nav,
@@ -20,6 +23,18 @@
 }
 
 /* Make footer stack on small screens */
+@media (max-width: 425px) {
+     .footer__decoration{
+        display: flex;
+        flex-direction: column;
+     }
+     .footer__col{margin-top: 20px;}
+     .footer__cols{
+        display: flex;
+        flex-direction: column;
+     }
+}
+
 @media (max-width: 640px) {
     .footer__inner {
         flex-direction: column;
@@ -58,6 +73,7 @@
 .footer__title {
     font-family: Questrial, sans-serif;
     font-size: 24px;
+    color:#ffffff;
 }
 
 .footer__link {
