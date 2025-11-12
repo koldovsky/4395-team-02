@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+  --color-bg: #0f0f10;
+  --color-card: #181818;
+  --color-heading: #ffffff;
+  --color-text: #f6f6f6;
+  --color-text-muted: #dbdbdb;
+  --color-accent: #ff6534;
+
+  --font-main: 'Lato', sans-serif;
+  --font-title: 'Questrial', sans-serif;
+}
+
+.team {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.team__label {
+  font-family: var(--font-main);
+  font-size: 12px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.team__title {
+  font-family: var(--font-title);
+  font-size: 38px;
+  color: var(--color-heading);
+}
+
+.team__title-dot {
+  color: var(--color-accent);
+}
+
+.team__subtitle {
+  font-family: var(--font-main);
+  font-size: 19px;
+  color: var(--color-text);
+}
+
+.team__carousel {
+  position: relative;
+}
+
+.team__cards {
+  display: flex;
+  gap: 30px;                 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 0;            
+  scrollbar-width: none;     
+}
+.team__cards::-webkit-scrollbar { display: none; }
