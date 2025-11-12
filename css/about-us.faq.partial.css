@@ -3,7 +3,7 @@
 
 .about-faq {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: var(--light-background-color);
 }
 
 .about-faq__header {
