@@ -10,6 +10,7 @@
 }
 
 body {
+  --font-size: 16px;
   --text-color: #bdbdbd;
   --background-color: #181818;
   scroll-behavior: smooth;
@@ -29,5 +30,28 @@ img {
 .work-steps__title {
   --font-size: 12px;
   --text-color: #ff6534;
-
+  
+}
+.work-steps__subtitle {
+  --font-size: 47px;
+  --text-color: #ffffff;
+  --font-family: 'Questrial', sans-serif;
+}
+.work-steps__intro {
+  --font-size: 19px;
+  --text-color: #f6f6f6;
+}
+.work-steps__step {
+  --font-size: 23px;
+  --text-color: #ffffff;
+  --font-family: 'Questrial', sans-serif;
+}
+.work-steps__number {
+  --font-size:23px;
+  --text-color: #ff6534;
+  --font-family: 'Questrial', sans-serif;
+}
+.work-steps__paragraph {
+  --font-size: 17px;
+  --text-color: #bdbdbd;
 }
