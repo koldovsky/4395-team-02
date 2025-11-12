@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Questrial&display=swap');
+
+.work-steps__title {
+  font-size: 12px;
+  color: #ff6534;
+  background-color: #181818;
+}
+.work-steps__subtitle {
+  font-size: 47px;
+  color: #ffffff;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
+}
+.work-steps__intro {
+  font-size: 19px;
+  color: #f6f6f6;
+  background-color: #181818;
+}
+.work-steps__step {
+  font-size: 23px;
+  color: #ffffff;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
+}
+.work-steps__number {
+  font-size:23px;
+  color: #ff6534;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
+}
+.work-steps__paragraph {
+  font-size: 17px;
+  color: #bdbdbd;
+  background-color: #181818;
+}

@@ -21,13 +21,13 @@
 
 /* === REPAIR SERVICES SECTION === */
 .repair-services {
-  background-color: #fff; /* Білий фон */
+  width: 100%;
+  background-color: #fff; /* ✅ Білий фон на всю ширину */
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* вирівнюємо весь контент зліва */
   gap: 60px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -40,24 +40,27 @@
   letter-spacing: 1px;
   text-align: left;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 /* Заголовок (We Make Mobile Repair Stress-free.) */
 .repair-services__title {
   font-family: var(--font-title);
-  font-size: 38px;
-  line-height: 1.2;
+  font-size: 56px;
+  line-height: 60%;
+  font-weight: 100;
   color: var(--color-black);
   text-align: left;
   max-width: 500px;
-  white-space: pre-line; /* дозволяє переносити вручну через \n */
+  white-space: pre-line;
 }
 
-/* Звичайний чорний текст + помаранчева крапка */
+/* Слово "Stress-free" чорне */
 .repair-services__highlight {
   color: var(--color-black);
 }
 
+/* ✅ Крапка помаранчева (#ff6534) */
 .repair-services__accent-dot {
   color: var(--color-accent);
 }
@@ -99,7 +102,7 @@
 /* Назва послуги */
 .repair-services__name {
   font-family: var(--font-title);
-  font-size: 22px;
+  font-size: 24px;
   color: var(--color-black);
   margin: 0;
 }

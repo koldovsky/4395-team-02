@@ -1,0 +1,142 @@
+/* ABOUT FAQ SECTION */
+/* Alina Vlasenko */
+
+.about-faq {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.about-faq__header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.about-faq__title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.about-faq__label {
+  font-family: "Questrial", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.about-faq__dot {
+  color: var(--accent-color);
+}
+
+.about-faq__subtitle {
+  font-size: 19px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* GRID */
+.about-faq__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* ITEM */
+.about-faq__item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+}
+
+/* QUESTION BUTTON */
+.about-faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-family: "Questrial", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.about-faq__question:hover {
+  color: var(--accent-color);
+}
+
+.about-faq__icon {
+  font-size: 22px;
+  line-height: 1;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* ACTIVE STATE */
+.about-faq__question[aria-expanded="true"] {
+  color: var(--accent-color);
+}
+
+.about-faq__question[aria-expanded="true"] .about-faq__icon {
+  transform: rotate(180deg);
+}
+
+/* ANSWER (hidden by default) */
+.about-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.about-faq__answer p {
+  margin-top: 15px;
+}
+
+/* ACTIVE ANSWER */
+.about-faq__item.active .about-faq__answer {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* MEDIA QUERIES */
+/* ============================= */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .about-faq__label {
+    font-size: 47px;
+  }
+
+  .about-faq__question {
+    font-size: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .about-faq__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .about-faq__label {
+    font-size: 56px;
+  }
+}
