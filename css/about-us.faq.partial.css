@@ -120,7 +120,7 @@
 
 /* Tablet */
 @media (min-width: 600px) {
-  .about-faq__title {
+  .about-faq__label {
     font-size: 36px;
   }
 
