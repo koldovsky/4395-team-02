@@ -3,34 +3,34 @@
 
 .work-steps__title {
   font-size: 12px;
-  color: #ff6534;
-  background-color: #181818;
+  color: var(--accent-title-color);
+  background-color: var(--secondary-dark-background-color);
 }
 .work-steps__subtitle {
   font-size: 47px;
-  color: #ffffff;
-  background-color: #181818;
+  color: var(--big-title-on-dark-color);
+  background-color: var(--secondary-dark-background-color);
   font-family: 'Questrial', sans-serif;
 }
 .work-steps__intro {
   font-size: 19px;
-  color: #f6f6f6;
-  background-color: #181818;
+  color: var(--subtitle-on-dark-color);
+  background-color: var(--secondary-dark-background-color);
 }
 .work-steps__step {
   font-size: 23px;
-  color: #ffffff;
-  background-color: #181818;
+  color:var(--big-title-on-dark-color);
+  background-color: var(--secondary-dark-background-color);
   font-family: 'Questrial', sans-serif;
 }
 .work-steps__number {
   font-size:23px;
-  color: #ff6534;
-  background-color: #181818;
+  color: var(--accent-title-color);
+  background-color: var(--secondary-dark-background-color);
   font-family: 'Questrial', sans-serif;
 }
 .work-steps__paragraph {
   font-size: 17px;
-  color: #bdbdbd;
-  background-color: #181818;
+  color: var(--text-on-dark-color);
+  background-color: var(--secondary-dark-background-color);
 }
