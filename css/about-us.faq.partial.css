@@ -23,7 +23,7 @@
 
 .about-faq__label {
   font-family: "Questrial", sans-serif;
-  font-size: 56px;
+  font-size: 38px;
   font-weight: 400;
   color: #1a1a1a;
   margin-bottom: 15px;
@@ -121,7 +121,7 @@
 /* Tablet */
 @media (min-width: 600px) {
   .about-faq__label {
-    font-size: 36px;
+    font-size: 47px;
   }
 
   .about-faq__question {
@@ -137,6 +137,6 @@
   }
 
   .about-faq__label {
-    font-size: 40px;
+    font-size: 56px;
   }
 }
