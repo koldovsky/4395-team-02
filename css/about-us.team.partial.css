@@ -1,27 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
-
-:root {
-  --color-card: #181818;
-  --color-heading: #ffffff;
-  --color-text: #f6f6f6;
-  --color-text-muted: #bdbdbd;
-  --color-btn-bg: #bdbdbd;
-
-  --font-title: "Questrial", sans-serif;
-}
-
 .team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 90px 0;
   position: relative;
-  background-image: url("../assets/img/header-header-hero/bg.png");
+  background-image: url("../assets/img/about-us/team/team-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: var(--color-text);
+  color: var(---subtitle-on-dark-color);
   text-align: center;
   overflow-x: clip;
 }
@@ -34,9 +22,9 @@
 }
 
 .team__title {
-  font-family: var(--font-title);
+  font-family: "Questrial", sans-serif;
   font-size: 38px;
-  color: var(--color-heading);
+  color: var(--big-title-on-dark-color);
   margin-top: 20px;
   padding: 0 24px;
 }
@@ -47,7 +35,7 @@
 
 .team__subtitle {
   font-size: 19px;
-  color: var(--color-text);
+  color: var(--subtitle-on-dark-color);
   margin-top: 20px;
   padding: 0 24px;
 }
@@ -74,7 +62,7 @@
   .team__card {
     flex: 0 0 100%;
     scroll-snap-align: center;
-    background: var(--color-card);
+    background: var(--secondary-dark-background-color);
     padding: 31px;
     text-align: center;
     position: relative;
@@ -90,7 +78,7 @@
       }
 
       .team__name {
-        font-family: var(--font-title);
+        font-family: "Questrial", sans-serif;
         font-size: 22px;
         color: var(--accent-color);
         margin-top: 20px;
@@ -100,7 +88,7 @@
       display: block;
       margin: 0 auto;
       font-size: 17px;
-      color: var(--color-text-muted);
+      color: var(--text-on-dark-color);
       margin-top: 20px;
       margin-bottom: 30px;
     }
@@ -179,11 +167,4 @@
     right: 0;
     transform: translate(50%, -50%);
   }
-}
-
-/* disabled (коли нема куди гортати) */
-.team__carousel-btn[disabled] {
-  opacity: 0.45;
-  cursor: default;
-  box-shadow: none;
 }
