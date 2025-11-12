@@ -1,0 +1,160 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #111;
+}
+
+.services {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.services__label {
+    color: #ff5a1f;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.services__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.services__subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+/*  CAROUSEL  */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.services__carousel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.services__carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/*  ARROWS  */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 40px;
+    color: #ff5a1f;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background: #ff5a1f;
+    color: #fff;
+}
+
+.arrow.left {
+    left: -15px;
+}
+
+.arrow.right {
+    right: -15px;
+}
+
+/*  CARD */
+.services__card {
+    flex: 0 0 340px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.services__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.services__card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.services__card h3 {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.services__card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/*  BUTTON */
+.btn-orange {
+    background: #ff5a1f;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background: rgb(18, 18, 18);
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 768px) {
+    .services__card {
+        flex: 0 0 85%;
+    }
+
+    .arrow.left {
+        left: 10px;
+    }
+
+    .arrow.right {
+        right: 10px;
+    }
+
+    .services__title {
+        font-size: 32px;
+    }
+
+    .services__subtitle {
+        font-size: 16px;
+    }
+}
