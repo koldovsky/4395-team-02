@@ -1,7 +1,6 @@
-@import 'global.css';
-@import 'global.header-nav.css';
-@import 'about-us.hero.navigation.partial.css';
-@import 'about-us.team.partial.css';
+@import "global.css";
+@import "global.header-nav.css";
+@import "about-us.hero.navigation.partial.css";
 
 
 .header .main-nav {
