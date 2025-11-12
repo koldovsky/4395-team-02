@@ -1,0 +1,7 @@
+.header .main-nav {
+  background: #000;  /* solid black background */
+  border-bottom: 1px solid #222; /* optional, to keep the same bottom line */
+}
+.header .top-bar {
+  background: #000000;
+}
