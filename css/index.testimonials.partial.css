@@ -51,6 +51,7 @@
   overflow: hidden;
 }
 .testimonials-carousel__btn {
+  z-index: 1000;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

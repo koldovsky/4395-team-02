@@ -1,14 +1,10 @@
 @import "global.css";
 @import "global.header-nav.css";
+@import "about-us.header.css";
 @import "about-us.hero.navigation.partial.css";
+@import "about-us.faq.partial.css";
+@import "about-us.team.partial.css";
 
 
-.header .main-nav {
-  background: #000;  /* solid black background */
-  border-bottom: 1px solid #222; /* optional, to keep the same bottom line */
-}
-.header .top-bar {
-  background: #000000;
-}
 
 

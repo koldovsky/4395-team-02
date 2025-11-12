@@ -1,57 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Questrial&display=swap');
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  --font-size: 16px;
-  --text-color: #bdbdbd;
-  --background-color: #181818;
-  scroll-behavior: smooth;
-  font-family: "Lato", sans-serif;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
 .work-steps__title {
-  --font-size: 12px;
-  --text-color: #ff6534;
-  
+  font-size: 12px;
+  color: #ff6534;
+  background-color: #181818;
 }
 .work-steps__subtitle {
-  --font-size: 47px;
-  --text-color: #ffffff;
-  --font-family: 'Questrial', sans-serif;
+  font-size: 47px;
+  color: #ffffff;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
 }
 .work-steps__intro {
-  --font-size: 19px;
-  --text-color: #f6f6f6;
+  font-size: 19px;
+  color: #f6f6f6;
+  background-color: #181818;
 }
 .work-steps__step {
-  --font-size: 23px;
-  --text-color: #ffffff;
-  --font-family: 'Questrial', sans-serif;
+  font-size: 23px;
+  color: #ffffff;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
 }
 .work-steps__number {
-  --font-size:23px;
-  --text-color: #ff6534;
-  --font-family: 'Questrial', sans-serif;
+  font-size:23px;
+  color: #ff6534;
+  background-color: #181818;
+  font-family: 'Questrial', sans-serif;
 }
 .work-steps__paragraph {
-  --font-size: 17px;
-  --text-color: #bdbdbd;
+  font-size: 17px;
+  color: #bdbdbd;
+  background-color: #181818;
 }
