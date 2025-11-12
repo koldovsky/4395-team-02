@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background-color: #0d0d0d;
-  
-}
-
 /* --- Top Bar --- */
 .top-bar {
   background-image: url('../assets/img/header-header-hero/bg.png');
