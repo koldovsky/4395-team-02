@@ -11,14 +11,16 @@
 }
 
 :root {
-  --title-color: #121212;
+  --accent-title-color: #ff6534;
+  --big-title-color: #121212;
   --subtitle-color: #4E4E4E;
   --text-color: #727272;
-  --title-on-dark-color: #FFF;
+  --big-title-on-dark-color: #FFF;
   --subtitle-on-dark-color: #F6F6F6;
   --text-on-dark-color: #BDBDBD;
   --dark-background-color: #121212;
   --secondary-dark-background-color: #181818;
+  --accent-button-color: #ff6534;
   --accent-color: #ff6534;
   scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
