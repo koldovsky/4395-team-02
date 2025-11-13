@@ -1,9 +1,10 @@
 @import "global.css";
 @import "global.header-nav.css";
 @import "index.header-hero.partial.css";
+@import "index.features.partial.css";
+@import "index.about-us.partial.css";
 @import "index.testimonials.partial.css";
 @import "index.faq.partial.css";
 @import "index.work-steps.partial.css";
-@import "index.features.partial.css";
 @import "index.services.partial.css";
 @import "global.footer.partial.css";
