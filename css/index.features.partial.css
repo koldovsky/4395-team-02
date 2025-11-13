@@ -11,13 +11,30 @@
 .hero-repair {
   width: 100%;
   background-color: #fff;
+
+}
+
+.hero-repair {
+  position: relative; /* дозволяє позиціонувати зображення всередині */
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* центруємо картинку горизонтально */
+  z-index: 100;
 }
 
 .hero-repair__image {
+  max-width: 1170px;
+  max-height: 484.02px;
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  top: -60px; /* піднімає картинку вгору на 60px */
+  z-index: 200; /* щоб накладалася поверх попереднього блоку */
 }
+
+
 
 /* === REPAIR SERVICES SECTION === */
 .repair-services {
@@ -39,6 +56,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
+  font-weight: 700;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -94,8 +112,8 @@
 }
 
 .repair-services__icon {
-  width: 40px;
-  height: auto;
+  width: 70px;
+  height: 70px;
   margin-bottom: 8px;
 }
 
