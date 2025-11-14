@@ -8,10 +8,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  color: var(---subtitle-on-dark-color);
+  background-attachment: scroll;
+  color: var(--subtitle-on-dark-color);
   text-align: center;
   overflow-x: clip;
+  --team-card-width: clamp(320px, 12vw, 555px);
+  --team-card-gap: 30px;
 }
 
 .team__label {
@@ -44,55 +46,99 @@
   overflow: visible;
   position: relative;
   padding: 0 24px;
+}
 
-  .team__cards {
-    display: flex;
-    gap: 30px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 0 15px;
-    scrollbar-width: none;
-    margin-top: 40px;
-  }
-  .team__cards::-webkit-scrollbar {
-    display: none;
-  }
+.team__stage {
+  position: relative;
+  width: min(100%);
+  margin-inline: auto;
+  overflow: visible;
+}
 
-  .team__card {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    background: var(--secondary-dark-background-color);
-    padding: 31px;
-    text-align: center;
-    position: relative;
+.team__cards {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 0 15px;
+  scrollbar-width: none;
+  margin-top: 40px;
+}
+.team__cards::-webkit-scrollbar {
+  display: none;
+}
 
-    .team__figure {
-      .team__photo {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto;
-      }
+.team__card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: var(--secondary-dark-background-color);
+  padding: 31px;
+  text-align: center;
+  position: relative;
+}
+.team__figure {
+  margin: 0;
+}
 
-      .team__name {
-        font-family: "Questrial", sans-serif;
-        font-size: 22px;
-        color: var(--accent-color);
-        margin-top: 20px;
-      }
-    }
-    .team__description {
-      display: block;
-      margin: 0 auto;
-      font-size: 17px;
-      color: var(--text-on-dark-color);
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-  }
+.team__photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.team__name {
+  font-family: "Questrial", sans-serif;
+  font-size: 22px;
+  color: var(--accent-color);
+  margin-top: 20px;
+}
+.team__description {
+  display: block;
+  margin: 0 auto;
+  font-size: 17px;
+  color: var(--text-on-dark-color);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.team__carousel-btn {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--light-background-color);
+  border: 1px solid var(--light-background-color);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  top: 50%;
+  transform: translateY(-50%);
+  place-items: center;
+  cursor: pointer;
+  z-index: 3;
+  color: #000000;
+}
+
+.team .team__carousel-btn {
+  background: #dddddd;
+}
+
+.team__carousel-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.team__carousel-prev {
+  left: 0px;
+}
+.team__carousel-next {
+  right: 0px;
 }
 
 .team__socials {
@@ -121,50 +167,83 @@
   opacity: 1;
 }
 
-.team__carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  inline-size: 30px;
-  block-size: 30px;
-  border-radius: 50%;
-  border: 1px solid var(--color-btn-bg);
-  background: var(--color-btn-bg);
-
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  z-index: 3;
-  transition: transform 0.18s ease, box-shadow 0.18s ease,
-    background-color 0.18s ease, color 0.18s ease;
+.team__carousel-btn,
+.team__socials-link {
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.18s ease, color 0.18s ease,
+    transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
 }
 
 .team__carousel-btn:hover,
-.team__carousel-btn:focus-visible {
-  background: #ffffff;
+.team__carousel-btn:where(:active, :focus-visible) {
+  background: var(--light-background-color);
+}
+.team__carousel-btn:focus {
+  outline: none;
 }
 
-/* розташування */
-.team__carousel-prev {
-  left: 8px;
+@media (min-width: 768px) {
+  .team {
+    padding: 105px 0;
+  }
+  .team__title {
+    font-size: 47px;  
+  }
+  
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+    margin-inline: auto;
+  }
+  .team__cards {
+    overflow: hidden;
+    gap: var(--team-card-gap);
+    justify-content: flex-start;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+  }
+
+  .team__photo {
+  width: 120px;
+  height: 120px;
 }
-.team__carousel-next {
-  right: 8px;
+.team__name {
+  font-size: 23px;
 }
 
-/* більші екрани — підводимо до країв контейнера, але не виносимо назовні */
-@media (min-width: 720px) {
+  .team__carousel-prev { left: -18px; }
+  .team__carousel-next { right: -18px; }
+
   .team__carousel-btn {
-    inline-size: 44px;
-    block-size: 44px;
-    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    z-index: 5;
   }
-  .team__carousel-prev {
-    left: 0;
-    transform: translate(-50%, -50%);
+
+  .team__carousel-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+}
+
+@media (min-width: 992px) {
+  .team {
+    padding: 120px 0;
   }
-  .team__carousel-next {
-    right: 0;
-    transform: translate(50%, -50%);
+  .team__title {
+    font-size: 56px;  
   }
+
+.team__name {
+  font-size: 24px;
+}
+
+  .team__carousel-prev { left: -18px; }
+  .team__carousel-next { right: -18px; }
 }
