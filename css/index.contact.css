@@ -1,7 +1,7 @@
 /* Contact Section Styles */
 .contact {
   background-color: var(--dark-background-color);
-  background-image: url('../assets/img/header-header-hero/bg.png');
+  background-image: url('../assets/img/contact/contact-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
