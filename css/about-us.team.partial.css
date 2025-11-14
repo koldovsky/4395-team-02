@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
+  --color-bg: #0f0f10;
+  --color-card: #181818;
+  --color-heading: #ffffff;
+  --color-text: #f6f6f6;
+  --color-text-muted: #dbdbdb;
+
+  --font-title: "Questrial", sans-serif;
+}
+
+.team {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.team__label {
+  font-size: 12px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.team__title {
+  font-family: var(--font-title);
+  font-size: 38px;
+  color: var(--color-heading);
+}
+
+.team__title-dot {
+  color: var(--accent-color);
+}
+
+.team__subtitle {
+  font-size: 19px;
+  color: var(--color-text);
+}
+
+.team__carousel {
+  overflow: visible;
+  position: relative;
+}
+
+.team__cards {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+  scrollbar-width: none;
+}
+.team__cards::-webkit-scrollbar {
+  display: none;
+}
+
+.team__card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: var(--color-card);
+  padding: 32px 20px 24px;
+  text-align: center;
+  position: relative;
+
+  .team__figure {
+    margin: 0 0 16px;
+
+    .team__photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .team__name {
+      font-family: var(--font-title);
+      font-size: 22px;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+    }
+  }
+  .team__description {
+      font-size: 1.0625rem; /* 17px */
+      color: var(--color-text-muted);
+      max-width: 40ch;
+      margin: 0 auto 16px;
+    }
+}
+
+.team__carousel-prev,
+.team__carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.team__carousel-prev {
+  left: 8px;
+}
+.team__carousel-next {
+  right: 8px;
+}
+
+@media (min-width: 720px) {
+  .team__carousel-prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .team__carousel-next {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}
