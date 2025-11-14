@@ -9,17 +9,11 @@
 
 /* === HERO SECTION === */
 .hero-repair {
-  width: 100%;
-  background-color: #fff;
-
-}
-
-.hero-repair {
-  position: relative; /* дозволяє позиціонувати зображення всередині */
+  position: relative;
   width: 100%;
   background-color: #fff;
   display: flex;
-  justify-content: center; /* центруємо картинку горизонтально */
+  justify-content: center; /* центруємо картинку */
   z-index: 100;
 }
 
@@ -30,25 +24,26 @@
   height: auto;
   display: block;
   position: relative;
-  top: -60px; /* піднімає картинку вгору на 60px */
-  z-index: 200; /* щоб накладалася поверх попереднього блоку */
+  top: -60px; /* накладання */
+  z-index: 200;
 }
-
-
 
 /* === REPAIR SERVICES SECTION === */
 .repair-services {
   width: 100%;
-  background-color: #fff; /* ✅ Білий фон на всю ширину */
-  padding: 60px 20px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* вирівнюємо весь контент зліва */
+  align-items: flex-start;
   gap: 60px;
-  margin: 0 auto;
+
+  /* ширина рівна bigphoto */
+  max-width: 1170px;
+  margin: 0 auto; /* центрування по сторінці */
+  padding: 0; /* 🔥 без відступів збоку */
 }
 
-/* Підзаголовок (We repair your gadgets) */
+/* Підзаголовок */
 .repair-services__subtitle {
   color: var(--color-accent);
   font-family: var(--font-main);
@@ -61,15 +56,16 @@
   width: 100%;
 }
 
-/* Заголовок (We Make Mobile Repair Stress-free.) */
+/* Основний заголовок */
 .repair-services__title {
   font-family: var(--font-title);
   font-size: 56px;
-  line-height: 60%;
+  line-height: 0.6; /* 🔧 нормальний інтервал між рядками */
   font-weight: 100;
   color: var(--color-black);
   text-align: left;
-  max-width: 500px;
+  max-width: 1170px; /* 🔥 текст по ширині картинки */
+  margin: 0;
   white-space: pre-line;
 }
 
@@ -78,7 +74,7 @@
   color: var(--color-black);
 }
 
-/* ✅ Крапка помаранчева (#ff6534) */
+/* Крапка помаранчева */
 .repair-services__accent-dot {
   color: var(--color-accent);
 }
@@ -94,7 +90,7 @@
   width: 100%;
 }
 
-/* Desktop (2–3 колонки) */
+/* Desktop layout */
 @media (min-width: 768px) {
   .repair-services__list {
     grid-template-columns: repeat(3, 1fr);
@@ -117,7 +113,6 @@
   margin-bottom: 8px;
 }
 
-/* Назва послуги */
 .repair-services__name {
   font-family: var(--font-title);
   font-size: 24px;
@@ -125,7 +120,6 @@
   margin: 0;
 }
 
-/* Опис */
 .repair-services__text {
   font-family: var(--font-main);
   font-size: 17px;
@@ -134,7 +128,6 @@
   margin: 0;
 }
 
-/* Ціна */
 .repair-services__price {
   font-family: var(--font-main);
   font-size: 14px;
