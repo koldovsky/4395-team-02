@@ -12,7 +12,7 @@
   color: var(--subtitle-on-dark-color);
   text-align: center;
   overflow-x: clip;
-  --team-card-width: clamp(320px, 12vw, 555px);
+  --team-card-width: 320px;
   --team-card-gap: 30px;
 }
 
@@ -60,7 +60,6 @@
   gap: 30px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  padding: 0 15px;
   scrollbar-width: none;
   margin-top: 40px;
 }
@@ -135,10 +134,10 @@
 }
 
 .team__carousel-prev {
-  left: 0px;
+  left: -15px;
 }
 .team__carousel-next {
-  right: 0px;
+  right: -15px;
 }
 
 .team__socials {
@@ -182,14 +181,15 @@
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .team {
+    --team-card-width: calc(320px + (114 * ((100vw - 768px) / (991.98 - 768))));
     padding: 105px 0;
   }
   .team__title {
-    font-size: 47px;  
+    font-size: 47px;
   }
-  
+
   .team__stage {
     max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
     margin-inline: auto;
@@ -208,15 +208,19 @@
   }
 
   .team__photo {
-  width: 120px;
-  height: 120px;
-}
-.team__name {
-  font-size: 23px;
-}
+    width: 120px;
+    height: 120px;
+  }
+  .team__name {
+    font-size: 23px;
+  }
 
-  .team__carousel-prev { left: -18px; }
-  .team__carousel-next { right: -18px; }
+  .team__carousel-prev {
+    left: -18px;
+  }
+  .team__carousel-next {
+    right: -18px;
+  }
 
   .team__carousel-btn {
     width: 32px;
@@ -225,25 +229,100 @@
   }
 
   .team__carousel-btn svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  fill: none;
-}
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+  }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1279.98px) {
   .team {
+    --team-card-width: calc(
+      426px + (104 * ((100vw - 992px) / (1279.98 - 992)))
+    );
     padding: 120px 0;
   }
+
   .team__title {
-    font-size: 56px;  
+    font-size: 56px;
   }
 
-.team__name {
-  font-size: 24px;
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+  }
+  .team__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team__name {
+    font-size: 24px;
+  }
+
+  .team__carousel-prev {
+    left: -15px;
+  }
+  .team__carousel-next {
+    right: -15px;
+  }
 }
 
-  .team__carousel-prev { left: -18px; }
-  .team__carousel-next { right: -18px; }
+@media (min-width: 1200px) {
+  .team .team__carousel-btn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 60;
+    color: var(--tertiary-background-color);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.12s ease, color 0.12s ease,
+      background-color 0.12s ease, box-shadow 0.14s ease;
+  }
+
+  .team__carousel-btn svg {
+    width: 35px;
+    height: 35px;
+    stroke: currentColor;
+    fill: none;
+  }
+
+  .team__carousel-btn:focus {
+    outline: none;
+  }
+
+  .team__carousel-prev {
+    left: -40px;
+  }
+  .team__carousel-next {
+    right: -40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .team {
+    --team-card-width: 555px;
+  }
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+  }
+  .team__photo {
+    width: 120px;
+    height: 120px;
+  }
 }
