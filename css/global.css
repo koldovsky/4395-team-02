@@ -45,5 +45,7 @@ img {
   height: auto;
   display: block;
 }
-  padding-inline: 40px;
+
+.overflow-hidden {
+  overflow-x: hidden;
 }
