@@ -1,0 +1,17 @@
+:root {
+    --hardware-repair-text-color: #121212;
+    --color-bcg-black: #050505;
+    --color-numbers-orange: #ff6534;
+    --color-neetext-grey: #BDBDBD;
+    --color-card-repair: #727272;
+}
+
+.hardware__repair-text {
+    color: var(--hardware-repair-text-color);
+    font-size: 24px;
+}
+
+.servicess__card-repair {
+    color: var(--color-card-repair);
+    font-size: 17px:
+}
