@@ -1,0 +1,12 @@
+.hardware__repair-imagefirst {
+    width: 405px;
+    height: auto;
+
+}
+
+.hardware__repair-text {
+    font-size: 23px;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    color: #ff6534;
+}
