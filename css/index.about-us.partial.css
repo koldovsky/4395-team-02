@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .about-us__container {
     flex-direction: row;
     justify-content: center;
@@ -77,18 +77,20 @@
 }
 
 .about-us__link {
-  display: inline-block;
   background-color: var(--accent-button-color);
-  color: white;
+  color: var(--big-title-on-dark-color);
   padding: 12px 24px;
   text-decoration: none;
   font-size: 15px;
   width: 161px;
   line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .about-us__icon {
-  display: inline-flex;
   width: 24px;
   height: 24px;
 }
@@ -114,6 +116,7 @@
 
   .about-us__image {
     padding: 0 30px;
+    max-width: 555px;
     object-fit: contain;
   }
 
