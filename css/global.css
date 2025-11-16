@@ -36,7 +36,8 @@ img {
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding-inline: 40px;
 }
 .hero-repair__image {
   max-width: 1170;
@@ -44,6 +45,6 @@ img {
   width: 100%;
   height: auto;
   display: block;
-}
   padding-inline: 40px;
 }
+
