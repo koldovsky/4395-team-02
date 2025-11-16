@@ -1,0 +1,98 @@
+.process {
+  background-color: var(--tertiary-background-color);
+  padding: 56px 0;
+}
+
+.process__inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.process__label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--accent-title-color);
+  margin-bottom: 16px;
+}
+
+.process__title {
+  font-family: 'Questrial', sans-serif;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--big-title-color);
+  margin-bottom: 16px;
+}
+
+.process__accent {
+  color: var(--accent-color);
+}
+
+.process__subtitle {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--subtitle-color);
+}
+
+/* кроки */
+
+.process__steps {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.process__step {
+  background-color: var(--light-background-color);
+  padding: 24px 20px;
+  border-radius: 8px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
+}
+
+.process__step-number {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+
+.process__step-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--big-title-color);
+  margin-bottom: 12px;
+}
+
+.process__step-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* tablet / desktop */
+
+@media (min-width: 768px) {
+  .process {
+    padding: 80px 0 96px;
+  }
+
+  .process__steps {
+    margin-top: 56px;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .process__step {
+    flex: 1 1 0;
+    padding: 32px 28px;
+  }
+}
