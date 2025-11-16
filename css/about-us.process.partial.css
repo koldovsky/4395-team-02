@@ -1,11 +1,11 @@
 .process {
   background-color: var(--tertiary-background-color);
-  padding: 56px 0;
+  padding: 96px 0 112px;
 }
 
 .process__inner {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -23,9 +23,10 @@
   margin-bottom: 16px;
 }
 
+/* головний заголовок секції */
 .process__title {
-  font-family: 'Questrial', sans-serif;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-family: "Questrial", sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
   line-height: 1.2;
   color: var(--big-title-color);
   margin-bottom: 16px;
@@ -44,7 +45,7 @@
 /* кроки */
 
 .process__steps {
-  margin-top: 40px;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -52,22 +53,26 @@
 
 .process__step {
   background-color: var(--light-background-color);
-  padding: 24px 20px;
+  padding: 32px 28px;
   border-radius: 8px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
 }
 
+/* цифри – тут підключаємо Questrial, щоб крапка була як в макеті */
 .process__step-number {
-  font-size: 2rem;
+  font-family: "Questrial", sans-serif;
+  font-size: 2.5rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--accent-color);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
+/* заголовок кроку – теж Questrial, як в оригіналі */
 .process__step-title {
+  font-family: "Questrial", sans-serif;
   font-size: 1.0625rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--big-title-color);
   margin-bottom: 12px;
 }
@@ -82,17 +87,28 @@
 
 @media (min-width: 768px) {
   .process {
-    padding: 80px 0 96px;
+    padding: 104px 0 120px;
   }
 
   .process__steps {
-    margin-top: 56px;
     flex-direction: row;
     gap: 24px;
+    justify-content: space-between;
   }
 
   .process__step {
     flex: 1 1 0;
-    padding: 32px 28px;
+    padding: 40px 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .process__step {
+    padding: 48px 48px;
+  }
+
+  .process__step-number {
+    font-size: 2.75rem;
+    margin-bottom: 20px;
   }
 }
