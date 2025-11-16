@@ -26,6 +26,9 @@
   --accent-color: #FF6534;
   scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
+  --font-main: "Lato", sans-serif;
+--font-title: "Questrial", sans-serif;
+
 }
 
 img {
@@ -45,6 +48,11 @@ img {
   width: 100%;
   height: auto;
   display: block;
+
+}
+
+.overflow-hidden {
+  overflow-x: hidden;
   padding-inline: 40px;
 }
 
