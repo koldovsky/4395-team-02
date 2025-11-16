@@ -1,12 +1,4 @@
-:root {
-  --color-accent: #ff6534;        /* Помаранчевий акцент */
-  --color-text-dark: #4e4e4e;     /* Темно-сірий текст */
-  --color-text-gray: #727272;     /* Світло-сірий текст */
-  --color-black: #121212;         /* Глибокий чорний */
-  --font-main: "Lato", sans-serif; 
-  --font-title: "Questrial", sans-serif;
-}
-
+/*  Yaroslav Pundor */ 
 /* === HERO SECTION === */
 .hero-repair {
   position: relative;
@@ -15,6 +7,7 @@
   display: flex;
   justify-content: center; /* центруємо картинку */
   z-index: 100;
+  padding: 0 20px; /* відступи збоку для мобільних */
 }
 
 .hero-repair__image {
@@ -36,16 +29,17 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 60px;
+  padding: 0 20px; /* відступи зверху/знизу та збоку */
 
   /* ширина рівна bigphoto */
-  max-width: 1170px;
+  max-width: 1210px;
   margin: 0 auto; /* центрування по сторінці */
-  padding: 0; /* 🔥 без відступів збоку */
+  
 }
 
 /* Підзаголовок */
 .repair-services__subtitle {
-  color: var(--color-accent);
+  color: var(--accent-title-color);
   font-family: var(--font-main);
   font-size: 12px;
   text-transform: uppercase;
@@ -54,6 +48,7 @@
   font-weight: 700;
   margin-bottom: 10px;
   width: 100%;
+
 }
 
 /* Основний заголовок */
@@ -76,7 +71,7 @@
 
 /* Крапка помаранчева */
 .repair-services__accent-dot {
-  color: var(--color-accent);
+  color: var(--accent-title-color);
 }
 
 /* Сітка сервісів */
