@@ -21,7 +21,7 @@
   --light-background-color: #FFF;
   --dark-background-color: #121212;
   --secondary-dark-background-color: #181818;
-  --tertiary-background-color: #f6f6f6;
+  --tertiary-background-color: hsl(0, 0%, 96%);
   --accent-button-color: #FF6534;
   --accent-color: #FF6534;
   scroll-behavior: smooth;
@@ -47,4 +47,12 @@ img {
   width: 100%;
   height: auto;
   display: block;
+<<<<<<< HEAD
 
+=======
+}
+
+.overflow-hidden {
+  overflow-x: hidden;
+}
+>>>>>>> c27f4910b5b2bcae4e408e5e3496e660b9d01898

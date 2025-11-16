@@ -1,0 +1,50 @@
+.sale {
+    padding: 60px 12px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.sale__title {
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.sale__text {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.countdown__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+.countdown__number {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.countdown__label {
+    display: flex;
+}
+.countdown__separator {
+    display: flex;
+}
+.social {
+    display: flex;
+}
+.social__link {
+    display: flex;
+}
+.sale__actions {
+    display: flex;
+}
