@@ -26,6 +26,9 @@
   --accent-color: #FF6534;
   scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
+  --accent-button-hover-color: #d6451f;
+  --border-light-color: #e4e4e4;
+
 }
 
 img {
@@ -44,6 +47,5 @@ img {
   width: 100%;
   height: auto;
   display: block;
-}
   padding-inline: 40px;
 }
