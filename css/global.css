@@ -6,8 +6,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* outline: 1px solid red; */
+  box-sizing: border-box;  /* outline: 1px soloid red; */
 }
 
 :root {
@@ -29,13 +28,18 @@
 
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 img {
   display: block;
   max-width: 100%;
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding-inline: 40px;
