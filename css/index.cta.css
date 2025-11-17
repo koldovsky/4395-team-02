@@ -1,17 +1,7 @@
-:root {
-  --color-bg-dark: #0d0d0d;
-  --color-bg-light: #1a1a1a;
-  --color-text-light: #ffffff;
-  --color-text-muted: #bfbfbf;
-  --color-accent: #ff5c1c;
-  --color-border: #2c2c2c;
-  --font-main: "Inter", Arial, sans-serif;
-}
-
 /* CTA Section */
 .cta {
   background-color: var(--color-bg-dark);
-  color: var(--color-text-light);
+  color: var(--color-text-primary);
   padding: 3rem 1rem;
   text-align: center;
   font-family: var(--font-main);
@@ -24,7 +14,7 @@
 
 .cta__label {
   font-size: 0.875rem;
-  color: var(--color-accent);
+  color: var(--accent-color);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -35,22 +25,23 @@
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 1rem;
+  color: var(--big-title-on-dark-color);
 }
 
 .cta__highlight {
-  color: var(--color-accent);
+  color: var(--accent-color);
 }
 
 .cta__text {
-  color: var(--color-text-muted);
+  color: var(--text-on-dark-color);
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .cta__button {
   display: inline-block;
-  background-color: var(--color-accent);
-  color: var(--color-text-light);
+  background-color: var(--accent-button-color);
+  color: var(--big-title-on-dark-color);
   padding: 0.75rem 1.75rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -59,7 +50,7 @@
 }
 
 .cta__button:hover {
-  background-color: #ff7843;
+  background-color: var(--accent-color);
   transform: translateY(-2px);
 }
 
@@ -73,15 +64,15 @@
 }
 
 .cta__service {
-  background-color: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta__service:hover {
-  background-color: #222;
+  background-color: var(--color-bg-highlight);
   transform: translateY(-4px);
 }
 
@@ -94,12 +85,135 @@
 .cta__service-title {
   font-size: 1.125rem;
   font-weight: 600;
+  color: var(--subtitle-on-dark-color);
   margin-bottom: 0.5rem;
 }
 
 .cta__service-text {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: var(--text-on-dark-color);
+  line-height: 1.5;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .cta {
+    padding: 5rem 2rem;
+    text-align: left;
+  }
+
+  .cta__content {
+    text-align: center;
+  }
+
+  .cta__services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta__services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cta__content {
+    margin-bottom: 4rem;
+  }
+}
+/* CTA Section */
+.cta {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  padding: 3rem 1rem;
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+.cta__content {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.cta__label {
+  font-size: 0.875rem;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.cta__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--big-title-on-dark-color);
+}
+
+.cta__highlight {
+  color: var(--accent-color);
+}
+
+.cta__text {
+  color: var(--text-on-dark-color);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta__button {
+  display: inline-block;
+  background-color: var(--accent-button-color);
+  color: var(--big-title-on-dark-color);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta__button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Services Grid */
+.cta__services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta__service {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta__service:hover {
+  background-color: var(--color-bg-highlight);
+  transform: translateY(-4px);
+}
+
+.cta__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.cta__service-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--subtitle-on-dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.cta__service-text {
+  font-size: 0.95rem;
+  color: var(--text-on-dark-color);
   line-height: 1.5;
 }
 
