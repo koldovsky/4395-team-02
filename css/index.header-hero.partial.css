@@ -15,6 +15,7 @@
   color: white;
   margin: 0;
   font-family: Arial, sans-serif;
+  transition: padding 0.3s ease;
 }
 
 .hero-inner {
@@ -24,12 +25,24 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
+  transition: all 0.4s ease;
+}
+
+/* Smooth content transition when sidebar opens */
+body.menu-open .hero-inner {
+  transform: translateX(-160px);
+  opacity: 0.7;
+}
+
+body.menu-open .hero {
+  padding-right: 320px;
 }
 
 /* Left side: Text and button */
 .hero-left {
   flex: 1 1 45%;
   z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .eyebrow {
@@ -40,6 +53,7 @@
   font-size: 12px;
   margin-bottom: 10px;
   font-family: 'Lato', sans-serif;
+  transition: font-size 0.3s ease;
 }
 
 .hero-title {
@@ -49,6 +63,7 @@
   margin: 10px 0 20px;
   color: #fff;
   font-family: 'Questrial', sans-serif;
+  transition: font-size 0.3s ease;
 }
 
 .accent {
@@ -60,6 +75,7 @@
   color: #ccc;
   margin-bottom: 25px;
   line-height: 1.6;
+  transition: font-size 0.3s ease;
 }
 
 .hero-links {
@@ -115,12 +131,14 @@
   display: flex;
   justify-content: center;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .phone-mockup img {
   width: 260px;
   height: auto;
   filter: drop-shadow(0 5px 30px rgba(0, 0, 0, 0.6));
+  transition: width 0.3s ease, transform 0.3s ease;
 }
 
 /* Right Side: Stats and Expert */
@@ -130,6 +148,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .stat-number {
@@ -187,17 +206,245 @@
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+
+/* Desktop - Large screens (1200px+) */
+@media (min-width: 1200px) {
+  .hero {
+    padding: 100px 10%;
+  }
+}
+
+/* Tablet & Small Desktop (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 6%;
+    background-attachment: scroll;
+  }
+  
+  /* Disable sidebar content shift on tablets */
+  body.menu-open .hero-inner {
+    transform: none;
+    opacity: 1;
+  }
+  
+  body.menu-open .hero {
+    padding-right: 6%;
+  }
+  
+  .hero-title {
+    font-size: 64px;
+  }
+  
+  .stat-number {
+    font-size: 64px;
+  }
+  
+  .phone-mockup img {
+    width: 220px;
+  }
+}
+
+/* Tablet Portrait (max-width: 900px) */
+@media (max-width: 900px) {
+  .hero {
+    padding: 60px 5%;
+    min-height: auto;
+  }
+  
   .hero-inner {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
   }
 
   .hero-left, .hero-center, .hero-right {
     flex: 1 1 100%;
   }
-
+  
+  .hero-left {
+    order: 1;
+  }
+  
+  .hero-center {
+    order: 2;
+  }
+  
   .hero-right {
+    order: 3;
     align-items: center;
+  }
+  
+  .hero-title {
+    font-size: 56px;
+  }
+  
+  .hero-lead {
+    font-size: 1rem;
+  }
+  
+  .hero-links {
+    justify-content: center;
+  }
+  
+  .watch-btn {
+    margin: 0 auto;
+  }
+  
+  .phone-mockup img {
+    width: 200px;
+  }
+  
+  .stat-number {
+    font-size: 56px;
+  }
+  
+  .repair-link {
+    font-size: 20px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 4%;
+  }
+  
+  .hero-inner {
+    gap: 30px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .eyebrow {
+    font-size: 11px;
+  }
+  
+  .hero-lead {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-links {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .muted-link {
+    font-size: 0.75rem;
+  }
+  
+  .phone-mockup img {
+    width: 180px;
+  }
+  
+  .stat-number {
+    font-size: 48px;
+  }
+  
+  .stat-sub {
+    font-size: 0.8rem;
+  }
+  
+  .expert {
+    gap: 0.6rem;
+  }
+  
+  .expert-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .expert p {
+    font-size: 0.9rem;
+  }
+  
+  .repair-link {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 3%;
+  }
+  
+  .hero-inner {
+    gap: 25px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .hero-lead {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .muted-link {
+    font-size: 0.7rem;
+  }
+  
+  .watch-btn {
+    font-size: 0.9rem;
+  }
+  
+  .play-dot {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .phone-mockup img {
+    width: 150px;
+  }
+  
+  .stat-number {
+    font-size: 42px;
+  }
+  
+  .stat-sub {
+    font-size: 0.75rem;
+  }
+  
+  .expert-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .expert p {
+    font-size: 0.85rem;
+  }
+  
+  .repair-link {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+  
+  .phone-mockup img {
+    width: 130px;
   }
 }
