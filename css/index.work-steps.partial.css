@@ -1,59 +1,41 @@
-/*
-.work-steps__title {
-  font-size: 12px;
-  color: var(--accent-title-color);
-  background-color: var(--secondary-dark-background-color);
-}
-.work-steps__subtitle {
-  font-size: 47px;
-  color: var(--big-title-on-dark-color);
-  background-color: var(--secondary-dark-background-color);
-  font-family: 'Questrial', sans-serif;
-}
-.work-steps__intro {
-  font-size: 19px;
-  color: var(--subtitle-on-dark-color);
-  background-color: var(--secondary-dark-background-color);
-}
-.work-steps__step {
-  font-size: 23px;
-  color:var(--big-title-on-dark-color);
-  background-color: var(--secondary-dark-background-color);
-  font-family: 'Questrial', sans-serif;
-}
-.work-steps__number {
-  font-size:23px;
-  color: var(--accent-title-color);
-  background-color: var(--secondary-dark-background-color);
-  font-family: 'Questrial', sans-serif;
-}
-.work-steps__paragraph {
-  font-size: 17px;
-  color: var(--text-on-dark-color);
-  background-color: var(--secondary-dark-background-color);
-}
-  */
-
-  /* Основний контейнер */
+/* Головний контейнер */
 .work-steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 0px 20px;
-  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
   max-width: 1200px;
   background-color: var(--secondary-dark-background-color);
 }
+
+/* Дві колонки на ширших екранах */
 @media (min-width: 768px) {
-    .work-steps {
-    flex-direction: row;
+  .work-steps {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch; /* дозволяє розтягнути картинку по висоті */
   }
 }
-/* Ліва частина з текстом */
+
+/* Ліва текстова частина */
 .text-part {
-  flex: 1 1 50%;
-  max-width: 600px;
+  display: grid;
+  gap: 30px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  @media (min-width: 768px) {
+  padding-top: 105px;
+  padding-bottom: 95px;
+}
+}
+
+/* Один крок */
+.work-steps__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 /* Заголовки */
@@ -61,7 +43,6 @@
   font-size: 12px;
   color: var(--accent-title-color);
   letter-spacing: 1px;
-  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -69,7 +50,6 @@
   font-size: 47px;
   color: var(--big-title-on-dark-color);
   font-family: 'Questrial', sans-serif;
-  margin-bottom: 20px;
 }
 
 .work-steps__subtitle .dot {
@@ -80,32 +60,15 @@
   font-size: 19px;
   font-weight: 600;
   color: var(--subtitle-on-dark-color);
-  margin-bottom: 40px;
 }
 
-/* Один крок */
-.work-steps__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-/* Іконка кроку */
-.work-steps__icon {
-  display: block;
-  height: 100%;
-  max-width: 100%;
-  margin:auto;
-}
-
-/* Текстова частина кроку */
+/* Step text */
 .work-steps__step {
   font-size: 23px;
   font-weight: 600;
   color: var(--big-title-on-dark-color);
   font-family: 'Questrial', sans-serif;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .work-steps__number {
@@ -116,20 +79,19 @@
 .work-steps__paragraph {
   font-size: 17px;
   color: var(--text-on-dark-color);
-  margin-top: 5px;
   line-height: 1.6;
 }
 
-/* Права частина з картинкою */
+/* Колонка з картинкою */
 .img-part {
-  flex: 1 1 45%;
+  height: 100%;
+  align-self: stretch; /* займає всю висоту Grid-рядка */
   display: flex;
-  justify-content: center;
 }
 
+/* Картинка */
 .work-steps__process-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+  height: 100%; /* заповнює всю колонку */
+  object-fit: cover; /* обрізає правильно */
 }

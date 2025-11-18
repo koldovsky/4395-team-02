@@ -16,19 +16,24 @@
   --team-card-gap: 30px;
 }
 
+.team__section {
+  padding: 0 24px;
+}
+
 .team__label {
   font-size: 12px;
+  font-weight: 900;
   color: var(--accent-color);
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0 24px;
 }
 
 .team__title {
   font-family: "Questrial", sans-serif;
   font-size: 38px;
+  line-height: 1.1;
   color: var(--big-title-on-dark-color);
   margin-top: 20px;
-  padding: 0 24px;
 }
 
 .team__title-dot {
@@ -38,30 +43,30 @@
 .team__subtitle {
   font-size: 19px;
   color: var(--subtitle-on-dark-color);
-  margin-top: 20px;
-  padding: 0 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 25px;
 }
 
 .team__carousel {
   overflow: visible;
   position: relative;
-  padding: 0 24px;
 }
 
 .team__stage {
   position: relative;
-  width: min(100%);
+  width: 100%;
   margin-inline: auto;
   overflow: visible;
 }
 
 .team__cards {
   display: flex;
-  gap: 30px;
+  gap: var(--team-card-gap);
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  margin-top: 40px;
+  margin-top: 45px;
 }
 .team__cards::-webkit-scrollbar {
   display: none;
@@ -91,6 +96,7 @@
 .team__name {
   font-family: "Questrial", sans-serif;
   font-size: 22px;
+  font-weight: bold;
   color: var(--accent-color);
   margin-top: 20px;
 }
@@ -98,6 +104,7 @@
   display: block;
   margin: 0 auto;
   font-size: 17px;
+  line-height: 1.5;
   color: var(--text-on-dark-color);
   margin-top: 20px;
   margin-bottom: 30px;
@@ -134,10 +141,10 @@
 }
 
 .team__carousel-prev {
-  left: -15px;
+  left: -12px;
 }
 .team__carousel-next {
-  right: -15px;
+  right: -12px;
 }
 
 .team__socials {
@@ -186,17 +193,20 @@
     --team-card-width: calc(320px + (114 * ((100vw - 768px) / (991.98 - 768))));
     padding: 105px 0;
   }
+
+  .team__section {
+    padding: 0 32px;
+  }
+
   .team__title {
     font-size: 47px;
   }
 
   .team__stage {
     max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
-    margin-inline: auto;
   }
   .team__cards {
     overflow: hidden;
-    gap: var(--team-card-gap);
     justify-content: flex-start;
     scroll-snap-type: none;
     padding: 0;
@@ -205,12 +215,14 @@
   .team__card {
     flex: 0 0 var(--team-card-width);
     max-width: var(--team-card-width);
+    padding: 34px;
   }
 
   .team__photo {
     width: 120px;
     height: 120px;
   }
+
   .team__name {
     font-size: 23px;
   }
@@ -243,7 +255,9 @@
     );
     padding: 120px 0;
   }
-
+  .team__section {
+    padding: 0 40px;
+  }
   .team__title {
     font-size: 56px;
   }
@@ -251,9 +265,13 @@
   .team__stage {
     max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
   }
+  .team__cards {
+    margin-top: 50px;
+  }
   .team__card {
     flex: 0 0 var(--team-card-width);
     max-width: var(--team-card-width);
+    padding: 40px;
   }
   .team__photo {
     width: 120px;
@@ -270,6 +288,18 @@
   .team__carousel-next {
     right: -15px;
   }
+  .team__carousel-btn {
+    width: 32px;
+    height: 32px;
+    z-index: 5;
+  }
+
+  .team__carousel-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -277,23 +307,23 @@
     background: transparent;
     border: none;
     box-shadow: none;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     top: 50%;
     transform: translateY(-50%);
     display: grid;
     place-items: center;
     cursor: pointer;
     z-index: 60;
-    color: var(--tertiary-background-color);
+    color: var(--text-on-dark-color);
     -webkit-tap-highlight-color: transparent;
     transition: transform 0.12s ease, color 0.12s ease,
       background-color 0.12s ease, box-shadow 0.14s ease;
   }
 
   .team__carousel-btn svg {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     stroke: currentColor;
     fill: none;
   }
@@ -303,26 +333,42 @@
   }
 
   .team__carousel-prev {
-    left: -40px;
+    left: -50px;
   }
   .team__carousel-next {
-    right: -40px;
+    right: -50px;
   }
 }
 
 @media (min-width: 1280px) {
   .team {
     --team-card-width: 555px;
+    padding: 120px 0;
   }
+  .team__section {
+    padding: 0 40px;
+  }
+  .team__title {
+    font-size: 56px;
+  }
+
   .team__stage {
     max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__cards {
+    margin-top: 50px;
+    padding-inline: 0;
   }
   .team__card {
     flex: 0 0 var(--team-card-width);
     max-width: var(--team-card-width);
+    padding: 40px;
   }
   .team__photo {
     width: 120px;
     height: 120px;
+  }
+  .team__name {
+    font-size: 24px;
   }
 }

@@ -6,8 +6,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* outline: 1px solid red; */
+  box-sizing: border-box;  /* outline: 1px soloid red; */
 }
 
 :root {
@@ -24,12 +23,15 @@
   --tertiary-background-color: hsl(0, 0%, 96%);
   --accent-button-color: #FF6534;
   --accent-color: #FF6534;
-  scroll-behavior: smooth;
-  font-family: "Lato", sans-serif;
-  --font-main: "Lato", sans-serif;
---font-title: "Questrial", sans-serif;
+  --accent-button-hover-color: #d6451f;
+  --border-light-color: #e4e4e4;
 
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 
 img {
   display: block;
@@ -37,22 +39,17 @@ img {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding-inline: 40px;
 }
+
 .hero-repair__image {
   max-width: 1170;
   max-height: 484.02;
   width: 100%;
   height: auto;
   display: block;
-
-}
-
-.overflow-hidden {
-  overflow-x: hidden;
   padding-inline: 40px;
 }
-
