@@ -62,6 +62,11 @@ function litres(time) {
     return Math.floor(time / 2);
 }
 
+//- Sofiia Tolstonoh
+function litres(time) {
+    return time / 2 | 0;
+}
+
 //Opposites Attract ----------------------------------------------------------
 //https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
 
@@ -80,4 +85,9 @@ function lovefunc(flower1, flower2) {
 // - Truhon Angelina
 function lovefunc(flower1, flower2) {
     return (flower1 % 2 === 0) && (flower2 % 2 !== 0) || (flower1 % 2 !== 0) && (flower2 % 2 === 0);
+}
+
+//- Sofiia Tolstonoh
+function lovefunc(flower1, flower2) {
+    return (flower1 + flower2) % 2 === 1;
 }
