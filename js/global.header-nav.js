@@ -149,10 +149,60 @@ function initMobileMenu() {
     }, { passive: true });
 }
 
+// Process numbers explosion
+function initProcessNumbers() {
+  const nums = document.querySelectorAll('.process__step-number');
+
+  if (!nums.length) return;
+
+  nums.forEach((num) => {
+    if (num.dataset.prepared === 'true') return;
+
+    const text = num.textContent.trim();
+    num.textContent = '';
+
+    text.split('').forEach((char) => {
+      const span = document.createElement('span');
+      span.classList.add('process__digit');
+      span.textContent = char;
+      num.appendChild(span);
+    });
+
+    num.dataset.prepared = 'true';
+
+    num.addEventListener('mouseenter', () => {
+      const digits = num.querySelectorAll('.process__digit');
+
+      digits.forEach((d) => {
+        const randX = (Math.random() - 0.5) * 80;
+        const randY = (Math.random() - 0.5) * 80;
+        const randR = (Math.random() - 0.5) * 60;
+
+        d.style.setProperty('--rand-x', `${randX}px`);
+        d.style.setProperty('--rand-y', `${randY}px`);
+        d.style.setProperty('--rand-rot', `${randR}deg`);
+      });
+
+      num.classList.add('process__step-number--explode');
+
+      setTimeout(() => {
+        num.classList.remove('process__step-number--explode');
+      }, 250);
+    });
+
+    num.addEventListener('mouseleave', () => {
+      num.classList.remove('process__step-number--explode');
+    });
+  });
+}
+
 // Initialize on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
     initMobileMenu();
+
+    // Explosion
+    initProcessNumbers(); 
     
     // Smooth scroll for all anchor links on desktop too
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -180,5 +230,7 @@ document.addEventListener('htmx:afterSwap', function(event) {
     // Small delay to ensure content is fully rendered
     setTimeout(function() {
         initMobileMenu();
+        // Explosion
+        initProcessNumbers();
     }, 100);
 });
