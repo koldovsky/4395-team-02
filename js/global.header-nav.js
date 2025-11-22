@@ -174,20 +174,37 @@ function initProcessNumbers() {
       const digits = num.querySelectorAll('.process__digit');
 
       digits.forEach((d) => {
-        const randX = (Math.random() - 0.5) * 80;
-        const randY = (Math.random() - 0.5) * 80;
-        const randR = (Math.random() - 0.5) * 60;
+        const card = num.closest('.process__step');
+        if (!card) return;
+
+        const numberRect = num.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+
+        const maxLeft = numberRect.left - cardRect.left;
+        const maxRight = cardRect.right - numberRect.right;
+
+        const maxUp = numberRect.top - cardRect.top;
+        const maxDown = cardRect.bottom - numberRect.bottom;
+
+        const randX =
+          (Math.random() - 1) * 2 * Math.min(maxLeft, maxRight);
+        const randY =
+          (Math.random() - 1) * 2 * Math.min(maxUp, maxDown);
+
+        const randR = (Math.random() - 1) * 180;
+        const randScale = 0.8 + Math.random() * 0.7;
 
         d.style.setProperty('--rand-x', `${randX}px`);
         d.style.setProperty('--rand-y', `${randY}px`);
         d.style.setProperty('--rand-rot', `${randR}deg`);
+        d.style.setProperty('--rand-scale', `${randScale}`);
       });
 
       num.classList.add('process__step-number--explode');
 
       setTimeout(() => {
         num.classList.remove('process__step-number--explode');
-      }, 250);
+      }, 250); //timeout to reset after animation
     });
 
     num.addEventListener('mouseleave', () => {
