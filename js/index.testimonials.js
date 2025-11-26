@@ -7,38 +7,38 @@ let currentIndex = 1;
 updateSlide(currentIndex);
 
 function updateSlide(position) {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${position * slideWidth }px)`;
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${position * slideWidth}px)`;
 }
 
-buttonNext.addEventListener("click", ()=>{
-    if(currentIndex >= slides.length - 1)return
-    currentIndex++;
-    track.style.transition = 'transform 0.5s ease'; 
-    updateSlide(currentIndex);
+buttonNext.addEventListener("click", () => {
+  if (currentIndex >= slides.length - 1) return;
+  currentIndex++;
+  track.style.transition = "transform 0.5s ease";
+  updateSlide(currentIndex);
 });
 
-buttonPrev.addEventListener("click", ()=>{
-    if (currentIndex <= 0) return;
-    currentIndex--;
-    track.style.transition = 'transform 0.5s ease'; 
-    updateSlide(currentIndex);
+buttonPrev.addEventListener("click", () => {
+  if (currentIndex <= 0) return;
+  currentIndex--;
+  track.style.transition = "transform 0.5s ease";
+  updateSlide(currentIndex);
 });
 
 track.addEventListener("transitionend", () => {
-    if(currentIndex === slides.length - 1){
-        track.style.transition = "none";
-        currentIndex = 1;
-        updateSlide(currentIndex);
-    }
-    if(currentIndex === 0){
-        track.style.transition = "none";
-        currentIndex = slides.length - 2;
-        updateSlide(currentIndex);
-    }
+  if (currentIndex === slides.length - 1) {
+    track.style.transition = "none";
+    currentIndex = 1;
+    updateSlide(currentIndex);
+  }
+  if (currentIndex === 0) {
+    track.style.transition = "none";
+    currentIndex = slides.length - 2;
+    updateSlide(currentIndex);
+  }
 });
 
-window.addEventListener('resize', ()=>{
-    track.style.transition = 'none';
-    updateSlide(currentIndex);
+window.addEventListener("resize", () => {
+  track.style.transition = "none";
+  updateSlide(currentIndex);
 });

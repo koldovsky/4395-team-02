@@ -1,4 +1,3 @@
-// Mobile Menu Toggle Functionality
 function initMobileMenu() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navContent = document.querySelector('.nav-content');
@@ -13,7 +12,7 @@ function initMobileMenu() {
     
     console.log('Initializing mobile menu...');
     
-    // Function to close menu
+ 
     function closeMenu() {
         navContent.classList.remove('active');
         mobileMenuToggle.setAttribute('aria-expanded', 'false');
@@ -21,7 +20,6 @@ function initMobileMenu() {
         body.classList.remove('menu-open');
     }
     
-    // Function to open menu
     function openMenu() {
         navContent.classList.add('active');
         mobileMenuToggle.setAttribute('aria-expanded', 'true');
@@ -29,7 +27,6 @@ function initMobileMenu() {
         body.classList.add('menu-open');
     }
     
-    // Remove any existing event listeners by cloning the buttons
     const newToggle = mobileMenuToggle.cloneNode(true);
     mobileMenuToggle.parentNode.replaceChild(newToggle, mobileMenuToggle);
     const toggleButton = document.querySelector('.mobile-menu-toggle');
@@ -40,7 +37,6 @@ function initMobileMenu() {
     }
     const closeButton = document.querySelector('.close-menu-btn');
     
-    // Toggle menu on burger button click
     toggleButton.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -56,7 +52,6 @@ function initMobileMenu() {
         }
     });
     
-    // Close menu on close button click
     if (closeButton) {
         closeButton.addEventListener('click', function(e) {
             e.preventDefault();
