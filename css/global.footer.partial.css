@@ -1,4 +1,10 @@
 /* Iryna Zhavelia */
+.footer {
+    background: var(--secondary-dark-background-color);
+    color: var(--text-on-dark-color);
+}
+
+
 .footer__inner {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +14,11 @@
     padding: 1rem 2rem;
     width: 100%;
     box-sizing: border-box;
+    background: var(--secondary-dark-background-color);
+}
+
+.footer__tagline {
+    text-align: center;
 }
 
 /* Common child containers inside the footer */
@@ -19,37 +30,41 @@
     gap: 0.75rem;
 }
 
-/* Make footer stack on small screens */
-@media (max-width: 640px) {
-    .footer__inner {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: center;
-        gap: 0.75rem;
-    }
-
-    .footer__nav,
-    .footer__branding,
-    .footer__social {
-        justify-content: center;
-        width: 100%;
-    }
+.footer__brand {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
 }
 
-.footer__cols {
+.footer__brand-link {
+    text-align: center;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    align-items: flex-start;
 }
 
 .footer__col {
     padding: 0 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .footer__decoration {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.footer__cols {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     width: 100%;
     box-sizing: border-box;
@@ -58,6 +73,13 @@
 .footer__title {
     font-family: Questrial, sans-serif;
     font-size: 24px;
+    color: var(--big-title-on-dark-color);
+    text-align: center;
+}
+
+.footer__decorator {
+    width: 100%;
+    text-align: center;
 }
 
 .footer__link {
@@ -67,30 +89,36 @@
 
 .footer__social {
     margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__social svg {
     display: block;
     width: 30px;
     height: 30px;
-    fill: #ff6b35;
+    fill: var(--accent-color);
 }
 
 .footer__list {
     list-style: none;
+    width: 100%;
 }
 
 .footer__link {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-on-dark-color);
+    text-align: center;
 }
 
 .footer__item {
     margin: 10px 5px;
+    text-align: center;
 }
 
 .footer__link:hover {
-    color: #ff6b35;
+    color: var(--accent-color);
 }
 
 .footer__legal {
@@ -101,4 +129,71 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* Make footer stack on small screens */
+@media (min-width: 767px) {
+    .footer__decoration {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer__decorator {
+        text-align: start;
+    }
+
+    .footer__col {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .footer__cols {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .footer__brand {
+        display: flex;
+        flex-flow: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .footer__brand-link {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .footer__tagline {
+        text-align: left;
+    }
+
+    .footer__item {
+        text-align: left;
+    }
+
+    .footer__title {
+        text-align: left;
+    }
+
+    .footer__nav,
+    .footer__branding {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer__social {
+        justify-content: start;
+    }
+}
+
+
 /* Iryna Zhavelia */

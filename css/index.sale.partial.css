@@ -1,0 +1,130 @@
+.sale {
+    padding: 60px 16px;
+    background-color: var(--tertiary-background-color);
+    color: var(--big-title-color); 
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sale__title {
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--big-title-color);
+    margin-bottom: 24px;
+}
+
+.sale__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.countdown__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+.countdown__number {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--big-title-color);
+    margin-bottom: 8px;
+}
+.countdown__label {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+.countdown__separator {
+    width: 1px;
+    height: 40px;
+    background-color: var(--border-light-color); 
+    display: block;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+.social__link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background-color: var(--dark-background-color); 
+    color: var(--big-title-on-dark-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.sale__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.sale__btn {
+    padding: 14px 32px;
+    background-color: var(--accent-button-color); 
+    color: var(--big-title-on-dark-color);       
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sale__btn:hover {
+     background-color: var(--accent-button-hover-color); 
+}
+@media (max-width: 480px) {
+  .sale__title {
+    font-size: 28px;         
+  }
+
+  .sale__text {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .countdown {
+    flex-direction: column;   
+    gap: 16px;                 
+  }
+
+  .countdown__item {
+    min-width: auto;           
+  }
+
+  .countdown__number {
+    font-size: 24px;           
+  }
+
+  .countdown__label {
+    font-size: 14px;
+  }
+
+  .countdown__separator {
+    display: none;           
+  }
+
+  .sale__actions {
+    margin-top: 24px;
+  }
+
+  .sale__btn {
+    width: 100%;
+    max-width: 260px;         
+  }
+}

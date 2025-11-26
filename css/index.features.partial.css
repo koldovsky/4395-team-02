@@ -1,73 +1,96 @@
-:root {
-  --color-accent: #ff6534;
-  --color-text-dark: #4e4e4e;
-  --color-text-gray: #727272;
-  --font-main: "Lato", sans-serif;
-  --font-title: "Questrial", sans-serif;
-}
-
+/*  Yaroslav Pundor */ 
+/* === HERO SECTION === */
 .hero-repair {
+  position: relative;
   width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* центруємо картинку */
+  z-index: 100;
+  padding: 0 20px; /* відступи збоку для мобільних */
 }
 
 .hero-repair__image {
+  max-width: 1170px;
+  max-height: 484.02px;
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  top: -60px; /* накладання */
+  z-index: 200;
 }
 
-/* === Repair Services Section === */
+/* === REPAIR SERVICES SECTION === */
 .repair-services {
-  padding: 40px 20px;
+  width: 100%;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 20px; /* відступи зверху/знизу та збоку */
+
+  /* ширина рівна bigphoto */
+  max-width: 1210px;
+  margin: 0 auto; /* центрування по сторінці */
+  
 }
 
-/* Subtitle */
+/* Підзаголовок */
 .repair-services__subtitle {
-  color: var(--color-accent);
+  color: var(--accent-title-color);
   font-family: var(--font-main);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
+  font-weight: 700;
   margin-bottom: 10px;
+  width: 100%;
+
 }
 
-/* Title */
+/* Основний заголовок */
 .repair-services__title {
   font-family: var(--font-title);
-  font-size: 38px;
-  line-height: 1.2;
-  color: #000;
+  font-size: 56px;
+  line-height: 0.6; /* 🔧 нормальний інтервал між рядками */
+  font-weight: 100;
+  color: var(--color-black);
   text-align: left;
+  max-width: 1170px; /* 🔥 текст по ширині картинки */
+  margin: 0;
+  white-space: pre-line;
 }
 
+/* Слово "Stress-free" чорне */
 .repair-services__highlight {
-  color: var(--color-accent);
-  font-family: var(--font-title);
-  font-size: 38px;
+  color: var(--color-black);
 }
 
-/* Services grid */
+/* Крапка помаранчева */
+.repair-services__accent-dot {
+  color: var(--accent-title-color);
+}
+
+/* Сітка сервісів */
 .repair-services__list {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 40px;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-/* Desktop grid (2×3 layout) */
+/* Desktop layout */
 @media (min-width: 768px) {
   .repair-services__list {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 40px;
   }
 }
 
@@ -80,20 +103,18 @@
 }
 
 .repair-services__icon {
-  width: 40px;
-  height: auto;
+  width: 70px;
+  height: 70px;
   margin-bottom: 8px;
 }
 
-/* Service Name */
 .repair-services__name {
   font-family: var(--font-title);
-  font-size: 22px;
-  color: #000;
+  font-size: 24px;
+  color: var(--color-black);
   margin: 0;
 }
 
-/* Description */
 .repair-services__text {
   font-family: var(--font-main);
   font-size: 17px;
@@ -102,7 +123,6 @@
   margin: 0;
 }
 
-/* Price */
 .repair-services__price {
   font-family: var(--font-main);
   font-size: 14px;
@@ -110,4 +130,3 @@
   font-weight: 600;
   margin-top: 4px;
 }
-

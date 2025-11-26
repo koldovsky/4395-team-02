@@ -1,0 +1,374 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 0;
+  position: relative;
+  background-image: url("../assets/img/about-us/team/team-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  color: var(--subtitle-on-dark-color);
+  text-align: center;
+  overflow-x: clip;
+  --team-card-width: 320px;
+  --team-card-gap: 30px;
+}
+
+.team__section {
+  padding: 0 24px;
+}
+
+.team__label {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.team__title {
+  font-family: "Questrial", sans-serif;
+  font-size: 38px;
+  line-height: 1.1;
+  color: var(--big-title-on-dark-color);
+  margin-top: 20px;
+}
+
+.team__title-dot {
+  color: var(--accent-color);
+}
+
+.team__subtitle {
+  font-size: 19px;
+  color: var(--subtitle-on-dark-color);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 25px;
+}
+
+.team__carousel {
+  overflow: visible;
+  position: relative;
+}
+
+.team__stage {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.team__cards {
+  display: flex;
+  gap: var(--team-card-gap);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin-top: 45px;
+}
+.team__cards::-webkit-scrollbar {
+  display: none;
+}
+
+.team__card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: var(--secondary-dark-background-color);
+  padding: 31px;
+  text-align: center;
+  position: relative;
+}
+.team__figure {
+  margin: 0;
+}
+
+.team__photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.team__name {
+  font-family: "Questrial", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-top: 20px;
+}
+.team__description {
+  display: block;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-on-dark-color);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.team__carousel-btn {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--light-background-color);
+  border: 1px solid var(--light-background-color);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  top: 50%;
+  transform: translateY(-50%);
+  place-items: center;
+  cursor: pointer;
+  z-index: 3;
+  color: #000000;
+}
+
+.team .team__carousel-btn {
+  background: #dddddd;
+}
+
+.team__carousel-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.team__carousel-prev {
+  left: -12px;
+}
+.team__carousel-next {
+  right: -12px;
+}
+
+.team__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team__socials-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.team__socials-link:hover img,
+.team__socials-link:focus-visible img {
+  filter: brightness(0.78) contrast(1.05);
+  opacity: 1;
+}
+
+.team__carousel-btn,
+.team__socials-link {
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.18s ease, color 0.18s ease,
+    transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
+}
+
+.team__carousel-btn:hover,
+.team__carousel-btn:where(:active, :focus-visible) {
+  background: var(--light-background-color);
+}
+.team__carousel-btn:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .team {
+    --team-card-width: calc(320px + (114 * ((100vw - 768px) / (991.98 - 768))));
+    padding: 105px 0;
+  }
+
+  .team__section {
+    padding: 0 32px;
+  }
+
+  .team__title {
+    font-size: 47px;
+  }
+
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__cards {
+    overflow: hidden;
+    justify-content: flex-start;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+    padding: 34px;
+  }
+
+  .team__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team__name {
+    font-size: 23px;
+  }
+
+  .team__carousel-prev {
+    left: -18px;
+  }
+  .team__carousel-next {
+    right: -18px;
+  }
+
+  .team__carousel-btn {
+    width: 32px;
+    height: 32px;
+    z-index: 5;
+  }
+
+  .team__carousel-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1279.98px) {
+  .team {
+    --team-card-width: calc(
+      426px + (104 * ((100vw - 992px) / (1279.98 - 992)))
+    );
+    padding: 120px 0;
+  }
+  .team__section {
+    padding: 0 40px;
+  }
+  .team__title {
+    font-size: 56px;
+  }
+
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__cards {
+    margin-top: 50px;
+  }
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+    padding: 40px;
+  }
+  .team__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team__name {
+    font-size: 24px;
+  }
+
+  .team__carousel-prev {
+    left: -15px;
+  }
+  .team__carousel-next {
+    right: -15px;
+  }
+  .team__carousel-btn {
+    width: 32px;
+    height: 32px;
+    z-index: 5;
+  }
+
+  .team__carousel-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team .team__carousel-btn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 60;
+    color: var(--text-on-dark-color);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.12s ease, color 0.12s ease,
+      background-color 0.12s ease, box-shadow 0.14s ease;
+  }
+
+  .team__carousel-btn svg {
+    width: 40px;
+    height: 40px;
+    stroke: currentColor;
+    fill: none;
+  }
+
+  .team__carousel-btn:focus {
+    outline: none;
+  }
+
+  .team__carousel-prev {
+    left: -50px;
+  }
+  .team__carousel-next {
+    right: -50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .team {
+    --team-card-width: 555px;
+    padding: 120px 0;
+  }
+  .team__section {
+    padding: 0 40px;
+  }
+  .team__title {
+    font-size: 56px;
+  }
+
+  .team__stage {
+    max-width: calc((2 * var(--team-card-width)) + var(--team-card-gap));
+  }
+  .team__cards {
+    margin-top: 50px;
+    padding-inline: 0;
+  }
+  .team__card {
+    flex: 0 0 var(--team-card-width);
+    max-width: var(--team-card-width);
+    padding: 40px;
+  }
+  .team__photo {
+    width: 120px;
+    height: 120px;
+  }
+  .team__name {
+    font-size: 24px;
+  }
+}
