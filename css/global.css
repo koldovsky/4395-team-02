@@ -6,8 +6,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* outline: 1px solid red; */
+  box-sizing: border-box;  /* outline: 1px soloid red; */
 }
 
 :root {
@@ -24,24 +23,15 @@
   --tertiary-background-color: hsl(0, 0%, 96%);
   --accent-button-color: #FF6534;
   --accent-color: #FF6534;
-  scroll-behavior: smooth;
-  font-family: "Lato", sans-serif;
-  --font-main: "Lato", sans-serif;
-  --font-title: "Questrial", sans-serif;
-  --color-bg-main: #050608;
-  --color-bg-card: #0f1012;
-  --color-bg-dark: #050608;
-  --color-bg-highlight: #111111;
-  --color-text-primary: #f5f5f5;
-  --color-text-muted: #bcbcbc;
-  --color-accent: #ff5a2a;
-  --color-accent-soft: rgba(255, 90, 42, 0.15);
-  --color-border-soft: rgba(255, 255, 255, 0.06);
-
-  --font-main: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-    sans-serif;
+  --accent-button-hover-color: #d6451f;
+  --border-light-color: #e4e4e4;
 
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 
 img {
   display: block;
@@ -49,7 +39,7 @@ img {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding-inline: 40px;
@@ -61,10 +51,5 @@ img {
   width: 100%;
   height: auto;
   display: block;
-
-}
-
-.overflow-hidden {
-  overflow-x: hidden;
   padding-inline: 40px;
 }

@@ -62,6 +62,10 @@
   font-weight: 400;
   color: var(--accent-color);
   margin-bottom: 16px;
+  display: inline-flex;
+  gap: 0.05em;
+  cursor: pointer;
+  position: relative;
 }
 
 .process__step-title {
@@ -105,4 +109,15 @@
     font-size: 2.75rem;
     margin-bottom: 20px;
   }
+}
+
+.process__digit {
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+.process__step-number--explode .process__digit {
+  transform: translate3d(var(--rand-x, 0px), var(--rand-y, 0px), 0)
+    rotate(var(--rand-rot, 0deg));
 }
