@@ -1,5 +1,4 @@
 const track = document.querySelector(".testimonials-carousel__track");
-if (!track) return;
 const slides = Array.from(track.children);
 const buttonPrev = document.querySelector(".testimonials-carousel__btn--prev");
 const buttonNext = document.querySelector(".testimonials-carousel__btn--next");
