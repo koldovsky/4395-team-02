@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-@import 'global.css';
-@import 'global.header-nav.css';
-@import 'global.footer.partial.css';
-@import 'index.header-hero.partial.css';
-@import 'index.testimonials.partial.css';
-@import 'index.work-steps.partial.css';
-@import 'index.features.partial.css';
-=======
 @import "global.css";
 @import "global.header-nav.css";
 @import "index.header-hero.partial.css";
@@ -21,4 +12,3 @@
 @import "global.footer.partial.css";
 @import "index.cta.css";
 @import "index.stats.partial.css";
->>>>>>> 09b50cfdc3cb69e2ff8db34797f2787132240f48
