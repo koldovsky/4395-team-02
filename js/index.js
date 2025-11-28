@@ -1,6 +1,7 @@
 function init() {
   
   import("./index.testimonials.js");
+  import("./index.faq.partial.js");
   import("./index.work-steps.js");
   import("./index.sale.js");
 }
