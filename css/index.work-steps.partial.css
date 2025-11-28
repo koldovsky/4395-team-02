@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 1fr;
   margin: auto;
-  max-width: 1200px;
   background-color: var(--secondary-dark-background-color);
 }
 
@@ -23,6 +22,7 @@
   padding-bottom: 90px;
   padding-left: 30px;
   padding-right: 30px;
+  flex: 1;
   
   @media (min-width: 768px) {
   padding-top: 105px;
@@ -35,7 +35,8 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
-  align-items: flex-start;
+  align-items: center;
+  flex: 1;
 }
 
 /* Заголовки */
@@ -44,12 +45,16 @@
   color: var(--accent-title-color);
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 
 .work-steps__subtitle {
-  font-size: 47px;
+  font-size: 38px;
   color: var(--big-title-on-dark-color);
   font-family: 'Questrial', sans-serif;
+  @media (min-width: 768px) {
+    font-size: 47px;
+  }
 }
 
 .work-steps__subtitle .dot {
@@ -60,6 +65,7 @@
   font-size: 19px;
   font-weight: 600;
   color: var(--subtitle-on-dark-color);
+  font-family: 'Lato', sans-serif;
 }
 
 /* Step text */
@@ -80,6 +86,7 @@
   font-size: 17px;
   color: var(--text-on-dark-color);
   line-height: 1.6;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Колонка з картинкою */
