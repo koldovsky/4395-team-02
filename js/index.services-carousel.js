@@ -15,8 +15,6 @@ class ServicesCarousel {
         this.prevBtn = document.querySelector("#servicesPrev");
         this.nextBtn = document.querySelector("#servicesNext");
 
-        this.gap = parseInt(getComputedStyle(track).gap) || 40;
-
         this.prevBtn.onclick = () => this.moveLeft();
         this.nextBtn.onclick = () => this.moveRight();
 
@@ -26,13 +24,13 @@ class ServicesCarousel {
 
     slideWidth() {
         const first = this.track.children[0];
-        return first.getBoundingClientRect().width + this.gap;
+        const gap = parseInt(getComputedStyle(this.track).gap);
+        return first.offsetWidth + gap;
     }
 
     reset() {
         this.track.style.transition = "none";
         this.track.style.transform = "translateX(0)";
-
         requestAnimationFrame(() => {
             this.track.style.transition = "transform .45s ease";
         });
@@ -40,12 +38,9 @@ class ServicesCarousel {
 
     moveLeft() {
         const w = this.slideWidth();
-
         this.track.prepend(this.track.lastElementChild);
-
         this.track.style.transition = "none";
         this.track.style.transform = `translateX(-${w}px)`;
-
         requestAnimationFrame(() => {
             this.track.style.transition = "transform .45s ease";
             this.track.style.transform = "translateX(0)";
@@ -54,12 +49,9 @@ class ServicesCarousel {
 
     moveRight() {
         const w = this.slideWidth();
-
         this.track.append(this.track.firstElementChild);
-
         this.track.style.transition = "none";
         this.track.style.transform = `translateX(${w}px)`;
-
         requestAnimationFrame(() => {
             this.track.style.transition = "transform .45s ease";
             this.track.style.transform = "translateX(0)";
