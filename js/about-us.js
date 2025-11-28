@@ -1,5 +1,6 @@
 function init() {
   import("./about-us.team.js");
+  import("./about-us.faq.js");
 }
 
 const totalPartials = document.querySelectorAll(

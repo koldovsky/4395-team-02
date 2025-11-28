@@ -17,7 +17,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Offer Mail-in Repair Services for Customers Outside of New York?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -31,7 +31,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         How Much Does a Typical Phone Repair Cost?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -44,7 +44,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Can I Track the Status of My Repair?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -57,7 +57,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Provide Any Post-repair Support?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -74,7 +74,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         What Should I Do if I’m Not Satisfied with the Repair Service?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -88,7 +88,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Is It Safe to Leave My Data on the Device?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -102,7 +102,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         What Payment Options Do You Provide?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -115,7 +115,7 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Have Same-day Repairs?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
                         <p>
@@ -128,47 +128,3 @@
         </div>
     </div>
 </section>
-
-<!-- <script>
-    const questions = document.querySelectorAll(".about-faq__question");
-
-    questions.forEach((question) => {
-        question.addEventListener("click", () => {
-            const open = document.querySelector(".about-faq__question[aria-expanded='true']");
-            if (open && open !== question) {
-                open.setAttribute("aria-expanded", "false");
-                open.nextElementSibling.style.maxHeight = null;
-                open.querySelector(".about-faq__icon").textContent = "+";
-            }
-
-            const expanded = question.getAttribute("aria-expanded") === "true";
-            question.setAttribute("aria-expanded", !expanded);
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector(".about-faq__icon");
-
-            if (!expanded) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-                icon.textContent = "–";
-            } else {
-                answer.style.maxHeight = null;
-                icon.textContent = "+";
-            }
-        });
-    });
-</script> -->
-
-
-<!-- Цікавий варіант реалізації акардеону без JS
-
-<details class="about-faq__item">
-  <summary class="about-faq__question">Do you use original parts?</summary>
-  <p class="about-faq__answer">
-    Yes, we use certified original or OEM-quality replacement parts for all devices.
-  </p>
-</details>
-
-*** <details> і <summary> мають вбудовану поведінку акордеону, 
-    тобто при натисканні “розкриваються”. 
-    - тег <summary> поводиться як кнопка.
-    - <details> — семантично описує “додаткову інформацію”.
--->

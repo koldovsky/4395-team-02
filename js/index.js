@@ -2,7 +2,6 @@ function init() {
   
   import("./index.testimonials.js");
   import("./index.work-steps.js");
-  import("./about-us.faq.js");
 }
 
 const totalPartials = document.querySelectorAll(
