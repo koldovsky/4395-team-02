@@ -44,6 +44,7 @@
 
 /* CARD */
 .services__card {
+    text-align: left;
     flex: 0 0 calc((100% - 80px) / 3);
     background: #fff;
     border-radius: 20px;
@@ -148,3 +149,61 @@
         flex: 0 0 calc((100% - 80px) / 3);
     }
 }
+
+/* LOGOS SECTION  */
+.services-logos {
+    padding: 60px 0 80px;
+    width: 100%;
+}
+
+.services-logos__row {
+    max-width: 1250px;      
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+.services-logo {
+    background: #f5f5f5;
+    border-radius: 12px;
+    height: 120px;          
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-logo img {
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+    opacity: 0.35;
+    filter: grayscale(100%);
+    transition: .3s ease;
+}
+
+/* Hover */
+.services-logo img:hover {
+    opacity: 0.7;
+    filter: grayscale(0%);
+}
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+    .services-logos__row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .services-logos__row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .services-logos__row {
+        grid-template-columns: 1fr;
+    }
+}
+
