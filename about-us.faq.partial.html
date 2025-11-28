@@ -17,10 +17,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Offer Mail-in Repair Services for Customers Outside of New York?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Yes, we provide convenient mail-in repair services for customers located
                             outside of New York. Contact us for more information and instructions on
                             how to proceed.
@@ -31,10 +31,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         How Much Does a Typical Phone Repair Cost?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Repair costs vary depending on the issue and the model of your phone. We offer competitive
                             pricing and transparent quotes before starting any repair.
                         </p>
@@ -44,10 +44,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Can I Track the Status of My Repair?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Yes, we provide updates on the status of your repair throughout the process. You can also
                             contact us for real-time updates on your device's status.
                         </p>
@@ -57,10 +57,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Provide Any Post-repair Support?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Yes, we offer post-repair support and warranties on our services. If you encounter any
                             issues after your repair, don't hesitate to reach out, and we'll ensure your device is
                             functioning correctly.
@@ -74,10 +74,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         What Should I Do if I’m Not Satisfied with the Repair Service?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Your satisfaction is our top priority. If you have any concerns about the repair service,
                             please contact us immediately, and we will do our best to address and resolve any issues
                             promptly.
@@ -88,10 +88,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Is It Safe to Leave My Data on the Device?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             We take data privacy seriously and ensure your personal information remains secure during
                             repairs. However, we recommend backing up your data before bringing in your device for added
                             peace of mind.
@@ -102,10 +102,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         What Payment Options Do You Provide?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             We offer a variety of payment methods. We accept cash, checks, and the majority of credit
                             cards such as Visa, MasterCard, and American Express.
                         </p>
@@ -115,10 +115,10 @@
                 <div class="about-faq__item">
                     <button class="about-faq__question" aria-expanded="false">
                         Do You Have Same-day Repairs?
-                        <span class="about-faq__icon">+</span>
+                        <span class="about-faq__icon"></span>
                     </button>
                     <div class="about-faq__answer">
-                        <p>
+                        <p class="about-faq__answer-text">
                             Yes, we understand the urgency of certain repairs. Depending on the issue and technician
                             availability, we strive to offer same-day repairs whenever possible.
                         </p>
@@ -128,47 +128,3 @@
         </div>
     </div>
 </section>
-
-<!-- <script>
-    const questions = document.querySelectorAll(".about-faq__question");
-
-    questions.forEach((question) => {
-        question.addEventListener("click", () => {
-            const open = document.querySelector(".about-faq__question[aria-expanded='true']");
-            if (open && open !== question) {
-                open.setAttribute("aria-expanded", "false");
-                open.nextElementSibling.style.maxHeight = null;
-                open.querySelector(".about-faq__icon").textContent = "+";
-            }
-
-            const expanded = question.getAttribute("aria-expanded") === "true";
-            question.setAttribute("aria-expanded", !expanded);
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector(".about-faq__icon");
-
-            if (!expanded) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-                icon.textContent = "–";
-            } else {
-                answer.style.maxHeight = null;
-                icon.textContent = "+";
-            }
-        });
-    });
-</script> -->
-
-
-<!-- Цікавий варіант реалізації акардеону без JS
-
-<details class="about-faq__item">
-  <summary class="about-faq__question">Do you use original parts?</summary>
-  <p class="about-faq__answer">
-    Yes, we use certified original or OEM-quality replacement parts for all devices.
-  </p>
-</details>
-
-*** <details> і <summary> мають вбудовану поведінку акордеону, 
-    тобто при натисканні “розкриваються”. 
-    - тег <summary> поводиться як кнопка.
-    - <details> — семантично описує “додаткову інформацію”.
--->

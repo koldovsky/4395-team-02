@@ -21,6 +21,7 @@
 }
 
 .team__label {
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: 900;
   color: var(--accent-color);
@@ -41,6 +42,7 @@
 }
 
 .team__subtitle {
+  font-family: "Lato", sans-serif;
   font-size: 19px;
   color: var(--subtitle-on-dark-color);
   font-weight: 700;
@@ -101,6 +103,7 @@
   margin-top: 20px;
 }
 .team__description {
+  font-family: "Lato", sans-serif;
   display: block;
   margin: 0 auto;
   font-size: 17px;

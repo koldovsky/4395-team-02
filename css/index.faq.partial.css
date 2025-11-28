@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: stretch;
     min-height: 100vh; /* Ensures section takes full viewport height */
-    background-color: #f4f4f4; /* Light background outside the main container */
+    background-color: var(--tertiary-background-color); /* Use global variable */
 }
 /* Container for the two-column layout */
 .faq-page__container {
@@ -33,14 +33,14 @@
 .faq-page__content-column {
     flex: 1;
     max-width: 50%;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--dark-background-color);
+    color: var(--big-title-on-dark-color);
     padding: 120px 180px;
     box-sizing: border-box;
 }
 .faq-content__title {
     font-size: 0.9rem;
-    color: #ff5722;
+    color: var(--accent-title-color);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -56,55 +56,79 @@
 .faq-content__description {
     font-family: "Lato", sans-serif;
     font-size: 19px;
-    color: #aaaaaa;
+    color: var(--subtitle-on-dark-color);
     margin-bottom: 40px;
 }
 .faq-content__list {
-    border-top: 1px solid #333333;
+    border-top: 1px solid var(--secondary-dark-background-color);
 }
-.faq-item {
-    border-bottom: 1px solid #333333;
-    list-style: none;
-    padding: 15px 0;
+
+/* Accordion / flush styles (BEM) */
+.faq-content__accordion {
+    width: 100%;
 }
-.faq-item__question {
-    font-family: "Questrial", sans-serif;
+.faq-content__accordion--flush .faq-content__accordion-item {
+    border: none;
+    border-bottom: 1px solid var(--secondary-dark-background-color);
+}
+.faq-content__accordion-header {
+    margin: 0;
+}
+.faq-content__accordion-button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    font-family: "Questrial", sans-serif;
     font-size: 24px;
     font-weight: 700;
+    color: var(--big-title-on-dark-color);
+    background: transparent;
+    border: 0;
+    text-align: left;
     cursor: pointer;
-    padding: 10px 0;
-    color: #ffffff;
 }
-/* Icon (arrow) */
-.faq-item__icon {
+.faq-content__accordion-button:focus {
+    outline: none;
+}
+.faq-content__accordion-button::after {
+    /* Simple chevron using borders */
+    content: "";
     display: inline-block;
     width: 12.8px;
     height: 12.8px;
-    background-color: transparent;
-    border-right: 2px solid #ffffff; /* Chevron color */
-    border-bottom: 2px solid #ffffff;
-    transform: rotate(45deg); /* Initial state: down (closed) */
-    transition: transform 0.3s ease;
-    margin-left: 15px; /* 15px */
+    border-right: 2px solid var(--big-title-on-dark-color);
+    border-bottom: 2px solid var(--big-title-on-dark-color);
+    transform: rotate(45deg);
+    margin-left: 15px;
+    transition: transform 0.25s ease;
 }
-.faq-item[open] .faq-item__icon {
-    transform: rotate(-135deg); /* Open state: up */
-    margin-top: 5px; /* Small vertical shift for visual harmony */
+.faq-content__accordion-button:not(.faq-content__accordion-button--collapsed)::after {
+    transform: rotate(-135deg);
 }
-.faq-item__answer {
+.faq-content__accordion-collapse {
+    overflow: hidden;
+    height: 0; /* collapsed height */
+    transition: height 0.32s ease; /* animate height */
+}
+.faq-content__accordion-collapse.show {
+    /* when JS expands, it will set an explicit height; keep styles minimal here */
+}
+.collapse {
+    height: 0;
+    overflow: hidden;
+}
+.collapse.show {
+    height: auto; /* fallback for no-JS, but JS will manage explicit heights for animation */
+}
+.faq-content__accordion-body {
+    padding: 10px 0 18px 0;
     font-family: "Lato", sans-serif;
-    padding: 10px 0 10px 0;
     font-size: 17px;
     line-height: 1.5;
-    color: #aaaaaa;
+    color: var(--text-on-dark-color);
 }
 /* Remove default details marker in some browsers */
-.faq-item > summary {
-    list-style: none;
-}
-.faq-item > summary::-webkit-details-marker {
-    display: none;
+.faq-content__accordion-header + .faq-content__accordion-collapse > .faq-content__accordion-body {
+    /* keep spacing consistent */
 }
