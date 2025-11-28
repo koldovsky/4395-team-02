@@ -8,7 +8,7 @@ function initAboutUsFaqAccordion() {
     btn.addEventListener("click", () => {
       const isOpen = item.classList.contains("active");
 
-      // Закриваємо всі (миттєво тригеримо анімацію закриття)
+      // Close everything (instantly trigger the close animation)
       items.forEach(i => {
         i.classList.remove("active");
         i.querySelector(".about-faq__question").setAttribute("aria-expanded", "false");
@@ -16,12 +16,12 @@ function initAboutUsFaqAccordion() {
         ans.style.maxHeight = "0px";
       });
 
-      // Якщо саме цей не був відкритий — відкриваємо
+      // If this one wasn't open, we'll open it.
       if (!isOpen) {
         item.classList.add("active");
         btn.setAttribute("aria-expanded", "true");
 
-        // Автовисота — для плавної анімації
+        // Auto-height — for smooth animation
         requestAnimationFrame(() => {
           answer.style.maxHeight = answer.scrollHeight + "px";
         });
