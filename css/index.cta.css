@@ -1,6 +1,6 @@
 /* CTA Section */
 .cta {
-  background-color: var(--color-bg-dark);
+  background-color: var(--dark-background-color);
   color: var(--color-text-primary);
   padding: 3rem 1rem;
   text-align: center;
