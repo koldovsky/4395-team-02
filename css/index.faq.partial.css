@@ -35,7 +35,7 @@
     max-width: 50%;
     background-color: var(--dark-background-color);
     color: var(--big-title-on-dark-color);
-    padding: 120px 180px;
+    padding: 120px 90px;
     box-sizing: border-box;
 }
 .faq-content__title {
@@ -58,6 +58,8 @@
     font-size: 19px;
     color: var(--subtitle-on-dark-color);
     margin-bottom: 40px;
+    opacity: 50%;
+    font-weight: 300;
 }
 .faq-content__list {
     border-top: 1px solid var(--secondary-dark-background-color);
@@ -87,24 +89,18 @@
     border: 0;
     text-align: left;
     cursor: pointer;
+    gap: 15px;
 }
 .faq-content__accordion-button:focus {
     outline: none;
 }
-.faq-content__accordion-button::after {
-    /* Simple chevron using borders */
-    content: "";
-    display: inline-block;
-    width: 12.8px;
-    height: 12.8px;
-    border-right: 2px solid var(--big-title-on-dark-color);
-    border-bottom: 2px solid var(--big-title-on-dark-color);
-    transform: rotate(45deg);
-    margin-left: 15px;
+.faq-content__accordion-arrow {
+    flex-shrink: 0;
+    fill: var(--big-title-on-dark-color);
     transition: transform 0.25s ease;
 }
-.faq-content__accordion-button:not(.faq-content__accordion-button--collapsed)::after {
-    transform: rotate(-135deg);
+.faq-content__accordion-button:not(.faq-content__accordion-button--collapsed) .faq-content__accordion-arrow {
+    transform: rotate(180deg);
 }
 .faq-content__accordion-collapse {
     overflow: hidden;
@@ -131,4 +127,113 @@
 /* Remove default details marker in some browsers */
 .faq-content__accordion-header + .faq-content__accordion-collapse > .faq-content__accordion-body {
     /* keep spacing consistent */
+}
+
+/* ========== MOBILE RESPONSIVE STYLES ========== */
+
+/* Tablet and smaller (1024px and below) */
+@media (max-width: 1024px) {
+    .faq-page__container {
+        flex-direction: column;
+    }
+
+    .faq-page__image-column {
+        max-width: 100%;
+        flex: 1;
+        min-height: 300px;
+    }
+
+    .faq-page__content-column {
+        max-width: 100%;
+        flex: 1;
+        padding: 60px 40px;
+    }
+}
+
+/* Mobile devices (768px and below) */
+@media (max-width: 768px) {
+    .faq-page {
+        min-height: auto;
+    }
+
+    .faq-page__image-column {
+        display: above;
+    }
+
+    .faq-page__container {
+        flex-direction: column;
+    }
+
+    .faq-page__content-column {
+        max-width: 100%;
+        padding: 40px 20px;
+        background-color: var(--dark-background-color);
+    }
+
+    .faq-content__title {
+        font-size: 0.85rem;
+    }
+
+    .faq-content__headline {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .faq-content__description {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .faq-content__accordion-button {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .faq-content__accordion-body {
+        font-size: 15px;
+        padding: 8px 0 15px 0;
+    }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+    .faq-page__content-column {
+        padding: 30px 16px;
+    }
+
+    .faq-content__title {
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+
+    .faq-content__headline {
+        font-size: 24px;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+
+    .faq-content__description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .faq-content__accordion-button {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .faq-content__accordion-arrow {
+        width: 12px;
+        height: 12px;
+    }
+
+    .faq-content__accordion-body {
+        font-size: 14px;
+        padding: 6px 0 12px 0;
+    }
+
+    .faq-content__list {
+        border-top: 1px solid var(--secondary-dark-background-color);
+    }
 }
