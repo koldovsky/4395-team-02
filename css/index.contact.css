@@ -227,6 +227,7 @@
 .contact__form-group textarea:focus {
   outline: none;
   background-color: rgba(255, 101, 52, 0.05);
+  background-color: color-mix(in srgb, var(--accent-color) 5%, transparent);
 }
 
 .contact__form-group textarea {
@@ -318,6 +319,128 @@
   .contact__media {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Success Modal Styles */
+.contact-success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.7);
+  background-color: color-mix(in srgb, var(--dark-background-color) 70%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--modal-z-index);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-success-modal--show {
+  opacity: 1;
+}
+
+.contact-success-modal__content {
+  background-color: var(--secondary-dark-background-color);
+  padding: 60px 80px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(18, 18, 18, 0.5);
+  box-shadow: 0 10px 40px color-mix(in srgb, var(--dark-background-color) 50%, transparent);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.contact-success-modal--show .contact-success-modal__content {
+  transform: scale(1);
+}
+
+.contact-success-modal__checkmark {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.checkmark-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkmark-circle {
+  stroke: var(--success-color);
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: stroke-circle 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  stroke: var(--success-color);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke-check 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+@keyframes stroke-circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-check {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.contact-success-modal__message {
+  color: var(--big-title-on-dark-color);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .contact-success-modal__content {
+    padding: 50px 40px;
+  }
+
+  .contact-success-modal__checkmark {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-success-modal__message {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-success-modal__content {
+    padding: 40px 30px;
+  }
+
+  .contact-success-modal__checkmark {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-success-modal__message {
+    font-size: 16px;
   }
 }
 

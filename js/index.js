@@ -4,6 +4,7 @@ function init() {
   import("./index.faq.partial.js");
   import("./index.work-steps.js");
   import("./index.sale.js");
+  import("./index.contact-form.js");
 }
 
 const totalPartials = document.querySelectorAll(

@@ -25,6 +25,8 @@
   --accent-color: #FF6534;
   --accent-button-hover-color: #d6451f;
   --border-light-color: #e4e4e4;
+  --success-color: #4caf50;
+  --modal-z-index: 10000;
 
 }
 
